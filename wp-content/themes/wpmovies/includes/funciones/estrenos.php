@@ -17,7 +17,7 @@ $imgsrc = $img[0];
 <div class="item">
   <a href="<?php the_permalink() ?>">
   <div class="imgss">
-  <img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" width="120" height="170" />
+  <img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" width="100%" height="100%" />
   <?php if($values = get_post_custom_values("imdbRating")) { ?><div class="imdb"><span class="icon-grade"></span> <?php echo $values[0]; ?></div><?php } ?>
   </div>
   </a>
