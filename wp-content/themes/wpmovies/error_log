@@ -1,0 +1,2 @@
+[03-May-2015 23:11:07 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/tube/public_html/wp-content/themes/wpmovies/index.php on line 1
+[03-May-2015 23:11:13 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/tube/public_html/wp-content/themes/wpmovies/index.php on line 1
