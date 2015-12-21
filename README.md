@@ -1,2 +1,2 @@
 # critique
-Critique
+Critique Example readme. WORDPRESS
