@@ -12,33 +12,33 @@ define('mt_cms_url', 'wordpress.org');
 define('mt_repositorio', 'mundothemes.com');
 #######################################################
 	register_taxonomy 
-	( get_option('director'), 'post', array(
+	( 'director', 'post', array(
 	/* ============================================= */
 	'hierarchical' => false,  'label' => __( 'Directors', 'mundothemes' ),
 	'query_var' => true, 'rewrite' => true)
 	);
 	register_taxonomy 
-	( get_option('escritor'), 'post', array(
+	( 'escritor', 'post', array(
 	/* ============================================= */
 	'hierarchical' => false,  'label' => __( 'Writers', 'mundothemes' ),
 	'query_var' => true, 'rewrite' => true)
 	);
 	register_taxonomy 
-	( get_option('actor'), 'post', array(
+	( 'actor', 'post', array(
 	/* ============================================= */
 	'hierarchical' => false,  'label' => __( 'Cast', 'mundothemes' ),
 	'query_var' => true, 'rewrite' => true)
 	);
 
 	register_taxonomy 
-	( get_option('year'), 'post', array(
+	( 'year', 'post', array(
 	/* ============================================= */
 	'hierarchical' => false,  'label' => __( 'Year', 'mundothemes' ),
 	'query_var' => true, 'rewrite' => true)
 	);
 
 	register_taxonomy 
-	( get_option('calidad'), 'post', array(
+	( 'calidad', 'post', array(
 	/* ============================================= */
 	'hierarchical' => false,  'label' => __( 'Quality', 'mundothemes' ),
 	'query_var' => true, 'rewrite' => true)

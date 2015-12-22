@@ -104,7 +104,7 @@ extract( $args ); ?>
 <label for="<?php echo $name; ?>"><?php echo $title; ?></label>
 </th>
 <td>
-<input type="text" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value="<?php echo wp_specialchars( $value, 1 ); ?>" size="30" tabindex="30" style="width: 250px;margin-top:-3px;" />
+<input type="text" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value="<?php echo esc_html( $value, 1 ); ?>" size="30" tabindex="30" style="width: 250px;margin-top:-3px;" />
 <input type="hidden" name="<?php echo $name; ?>_noncename" id="<?php echo $name; ?>_noncename" value="<?php echo wp_create_nonce( plugin_basename( __FILE__ ) ); ?>" />
 <br />
 <p class="description"><?php echo $desc; ?></p>
@@ -135,7 +135,7 @@ extract( $args ); ?>
 <label for="<?php echo $name; ?>"><?php echo $title; ?></label>
 </th>
 <td>
-<textarea name="<?php echo $name; ?>" id="<?php echo $name; ?>" cols="60" rows="4" tabindex="30" style="width: 97%;margin-top:-3px;"><?php echo wp_specialchars( $value, 1 ); ?></textarea>
+<textarea name="<?php echo $name; ?>" id="<?php echo $name; ?>" cols="60" rows="4" tabindex="30" style="width: 97%;margin-top:-3px;"><?php echo esc_html( $value, 1 ); ?></textarea>
 <input type="hidden" name="<?php echo $name; ?>_noncename" id="<?php echo $name; ?>_noncename" value="<?php echo wp_create_nonce( plugin_basename( __FILE__ ) ); ?>" />
 <p class="description"><?php echo $desc; ?></p>
 </td>
