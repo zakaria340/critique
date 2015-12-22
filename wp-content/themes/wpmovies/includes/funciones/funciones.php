@@ -105,11 +105,7 @@ function drss_plus() { ?>
 <?php echo stripslashes($copy); ?>
 </span>
 <?php } else { ?>
-<span class="brand">
-<?php _e('Powered by', 'mundothemes'); ?>  
-<A HREF="https://<?php echo mt_cms_url; ?>/" target="_blank"><B><?php echo mt_cms; ?></B></A> & 
-<A HREF="https://<?php echo mt_repositorio; ?>/" target="_blank"><B><?php echo mt_name; ?></B></A> WPMovies<?php echo mt_version; ?>
-</span>
+
 <?php } ?>
 </div>
 <?php }
