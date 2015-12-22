@@ -296,8 +296,12 @@ table td,
 img {
 	border: 0;
 	height: auto;
-	max-width: 100%;
+	max-width: 660px;
 	vertical-align: middle;
+}
+
+a img {
+	display: block;
 }
 
 figure {
@@ -346,7 +350,7 @@ a {
 	color: #707070;
 	font-family: "Noto Sans", sans-serif;
 	margin: 0 0 28px 0;
-	max-width: 100%;
+	max-width: 660px;
 	padding: 0;
 	text-align: inherit;
 }
