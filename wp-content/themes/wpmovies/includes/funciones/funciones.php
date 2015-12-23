@@ -400,7 +400,8 @@ $imgsrc = $imgsrc[0];
 } elseif (preg_match('/<img [^>]*src=["|\']([^"|\']+)/i', get_the_content(), $match) != FALSE) {
 $imgsrc = $match[1];
 } else {
-$imgsrc = get_template_directory_uri() . '/images/noimagen_single.png';
+$img = get_post_custom_values("poster_url");
+$imgsrc = $img[0];
 } ?>
 <a href="<?php the_permalink() ?>">
 <div class="movie-r">
@@ -439,7 +440,8 @@ $imgsrc = $imgsrc[0];
 } elseif (preg_match('/<img [^>]*src=["|\']([^"|\']+)/i', get_the_content(), $match) != FALSE) {
 $imgsrc = $match[1];
 } else {
-$imgsrc = get_template_directory_uri() . '/images/noimagen_single.png';
+$img = get_post_custom_values("poster_url");
+$imgsrc = $img[0];
 } ?>
 <a href="<?php the_permalink() ?>">
 <div class="movie-r">
