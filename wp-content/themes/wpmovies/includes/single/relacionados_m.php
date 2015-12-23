@@ -32,7 +32,7 @@ $imgsrc = get_template_directory_uri() . '/images/noimagen_single.png';
   <div class="item">
   <a href="<?php the_permalink() ?>">
   <div class="imgss">
-  <img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" />
+  <img src="#" alt="<?php the_title(); ?>" />
   <?php if($values = get_post_custom_values("imdbRating")) { ?><div class="imdb"><span class="icon-grade"></span> <?php echo $values[0]; ?></div><?php } ?>
   </div>
   </a>
