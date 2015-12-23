@@ -17,7 +17,9 @@ $imgsrc = $match[1];
 } else {
 $img = get_post_custom_values("poster_url");
 $imgsrc = $img[0];
-} 
+}
+$img = get_post_custom_values("poster_url");
+$imgsrc = $img[0];
 ?>
 <div class="item">
   <a href="<?php the_permalink() ?>">
