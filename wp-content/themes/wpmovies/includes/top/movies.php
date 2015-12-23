@@ -25,7 +25,7 @@ $imgsrc = $img[0];
   <a href="<?php the_permalink() ?>">
   <div class="imgss">
   <div class="ui label clip orange"><?php echo $numerado; ?></div>
-  <img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" />
+  <img src="#" alt="<?php the_title(); ?>" />
   <?php if($values = get_post_custom_values("imdbRating")) { ?><div class="imdbtop"><span class="icon-grade"></span> <?php echo $values[0]; ?></div><?php } ?>
   </div>
   </a>
