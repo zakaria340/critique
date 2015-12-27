@@ -53,13 +53,13 @@ echo  ( !empty($custom_settings) ? stripslashes( $custom_settings ) : '/*
  */
 
 // Example: Hide ratings tooltip.
-options.showTooltip = false;
+options.showTooltip = true;
 
 // Example: Hide posts recommendations.
 options.hideRecommendations = true;
 
 // Example: Hide ratings report.
-options.showReport = false;
+options.showReport = true;
 
 // Example: Hide the ratings loading gif.
 options.showLoader = false;
