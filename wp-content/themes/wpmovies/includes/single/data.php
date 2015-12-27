@@ -63,10 +63,11 @@ $imgsrc = $img[0];
 </div><!-- dataplus -->
 </div>
 
+</div><!-- headingder -->
+<div class="datos">
+<div class="responsive">
 <?php if($values = get_post_custom_values("Trailer")) { ?>
 <?php echo $values[0]; ?>  
 <?php } ?>
-
-</div><!-- headingder -->
-
-
+</div>
+</div>
