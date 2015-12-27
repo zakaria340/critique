@@ -53,13 +53,13 @@ echo  ( !empty($custom_settings) ? stripslashes( $custom_settings ) : '/*
  */
 
 // Example: Hide ratings tooltip.
-options.showTooltip = true;
+options.showTooltip = false;
 
 // Example: Hide posts recommendations.
 options.hideRecommendations = true;
 
 // Example: Hide ratings report.
-options.showReport = true;
+options.showReport = false;
 
 // Example: Hide the ratings loading gif.
 options.showLoader = false;
@@ -96,7 +96,6 @@ options.mobile = {"showTrigger": false};
 
 			disableEditor(!$('#rw_custom_settings_enabled').prop('checked'));
 
-js_editor.setOptions({showTooltip: true});
 			function disableEditor(is_disabled) {
 				if (is_disabled) {
 					js_editor.setOptions({
