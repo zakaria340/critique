@@ -1,0 +1,1130 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "WP-PostRatings"
+msgstr ""
+
+#. Short description.
+msgid "Adds an AJAX rating system for your WordPress blog&#039;s post/page."
+msgstr ""
+
+#. Screenshot description.
+msgid "Admin - Ratings Log Bottom"
+msgstr ""
+
+#. Screenshot description.
+msgid "Admin - Ratings Log Top"
+msgstr ""
+
+#. Screenshot description.
+msgid "Admin - Ratings Options"
+msgstr ""
+
+#. Screenshot description.
+msgid "Admin - Ratings Templates"
+msgstr ""
+
+#. Screenshot description.
+msgid "Ratings"
+msgstr ""
+
+#. Screenshot description.
+msgid "Ratings Hover"
+msgstr ""
+
+#. Found in description header.
+msgid "Build Status"
+msgstr ""
+
+#. Found in description header.
+msgid "Development"
+msgstr ""
+
+#. Found in description header.
+msgid "Translations"
+msgstr ""
+
+#. Found in description header.
+msgid "Credits"
+msgstr ""
+
+#. Found in description header.
+msgid "Donations"
+msgstr ""
+
+#. Found in description list item.
+msgid "Plugin icon by <a href=\"http://www.freepik.com\">Freepik</a> from <a href=\"http://www.flaticon.com\">Flaticon</a>"
+msgstr ""
+
+#. Found in description list item.
+msgid "Icons courtesy of <a href=\"http://www.famfamfam.com/\" title=\"FamFamFam\">FamFamFam</a> and <a href=\"http://www.everaldo.com\" title=\"Everaldo\">Everaldo</a>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "<a href=\"https://travis-ci.org/lesterchan/wp-postratings\"></a>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "<a href=\"https://github.com/lesterchan/wp-postratings\" title=\"https://github.com/lesterchan/wp-postratings\">https://github.com/lesterchan/wp-postratings</a>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "<a href=\"http://dev.wp-plugins.org/browser/wp-postratings/i18n/\" title=\"http://dev.wp-plugins.org/browser/wp-postratings/i18n/\">http://dev.wp-plugins.org/browser/wp-postratings/i18n/</a>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "I spent most of my free time creating, updating, maintaining and supporting these plugins, if you really love my plugins and could spare me a couple of bucks, I will really appreciate it. If not feel free to use it without any obligations."
+msgstr ""
+
+#. Found in installation header.
+msgid "Usage"
+msgstr ""
+
+#. Found in installation list item, remaining content list item.
+msgid "Open <code>wp-content/plugins</code> Folder"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Put: <code>Folder: wp-PostRatings</code>"
+msgstr ""
+
+#. Found in installation list item, remaining content list item.
+msgid "Activate <code>WP-PostRatings</code> Plugin"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Go to <code>WP-Admin -&gt; Ratings</code>"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Open <code>wp-content/themes/&lt;YOUR THEME NAME&gt;/index.php</code>"
+msgstr ""
+
+#. Found in installation list item.
+msgid "You may place it in archive.php, single.php, post.php or page.php also."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Find: <code>&lt;?php while (have_posts()) : the_post(); ?&gt;</code>"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Add Anywhere Below It (The Place You Want The Ratings To Show): <code>&lt;?php if(function_exists('the_ratings')) { the_ratings(); } ?&gt;</code>"
+msgstr ""
+
+#. Found in installation list item.
+msgid "If you DO NOT want the ratings to appear in every post/page, DO NOT use the code above. Just type in <code>[ratings]</code> into the selected post/page content and it will embed ratings into that post/page only."
+msgstr ""
+
+#. Found in installation list item.
+msgid "If you want to embed other post ratings use <code>[ratings id=\"1\"]</code>, where 1 is the ID of the post/page ratings that you want to display."
+msgstr ""
+
+#. Found in installation list item.
+msgid "If you want to embed other post ratings results, use <code>[ratings id=\"1\" results=\"true\"]</code>, where 1 is the ID of the post/page ratings results that you want to display."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Remove No Results template from the_ratings_results()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added 'wp_postratings_display_comment_author_ratings' filter"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Removing Loading ... because SERP will index the text if the ratings is at the top of the article"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Move wp_postratings_image_extension filter to init()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Show headline, datePublished and image despite there is no ratings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Show post without ratings as well when sorting is done in URL. Props @talljosh."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added 'wp_postratings_image_extension' filter"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Added headline, datePublished, image to Article Schema type"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Deprecated PHP4 constructor in WordPress 4.3"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Remove schema code when Rich Snippets is off"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added worstRating of 1. Props @rafaellop"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Checked for defined() for RATINGS_IMG_EXT to allow overwrite"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Integration with WP-Stats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Suppor Custom Post Types in Widgets"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added 'wp_postratings_process_ratings_user', 'wp_postratings_process_ratings_userid' &amp; 'wp_postratings_check_rated' filters"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Supports WordPress Multisite Network Activate"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses WordPress native uninstall.php"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Use POST for ratings instead"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Add 'wp_postratings_schema_itemtype' filter so that you can change the Schema Type. See the FAQ for sample."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Use 'is_rtl()' instead of $text_direction"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses Dash Icons"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Option to turn off Google Rich Snippets"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Use SITECOOKIEPATH instead of COOKIEPATH. Props jbrule."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: If global $id is 0, use get_the_ID(). Props instruite."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: use esc_attr() and esc_js() to escape characters"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Add in %POST_ID% template variables"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Ensure Google Rich Snippet only displays in main loop and not in the widget"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Removed reviewCount from Google Rich Snippet"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Make the ratings widget more optimized"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Some widget templates are using postratings_template_mostrated instead of postratings_template_highestrated"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: No longer needing add_post_meta() if update_post_meta() fails"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Update 'Individual Rating Text/Value' Display no working due to missing nonce"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Added stripslashes() to remove slashes in the templates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Check whether it is an array to prevent array_key_exists() from throwing a warning."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Change htmlspecialchars to esc_attr(). Props Ryan Satterfield."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Change esc_attr() to wp_kses() For itemprop. Props oneTarek."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "check_rated_username() should be using $user_ID. Props Artem Gordinsky."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add Stars Flat (PNG) Icons. Props hebaf."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Change Schema From http://schema.org/Product To http://schema.org/Article"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed not logging ratings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed sorting of ratings logs"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed \"unable to delete logs/data\""
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add rate_post action for other plugins to use. Props paulgibbs."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Prevent direct access to PHP files to avoid PHP errors. Props paulgibbs."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixes for PHP Notices. Props paulgibbs."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Better and safer handling of input variables"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed some manual SQL in favour of WP's API."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Audited the rest of the SQL to make sure it was safe."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed unneeded switch() block, and decreased the line indentation for better readability :)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Use $wpdb-&gt;prepare() for SQL statements in wp-postratings.php"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "esc_attr(). Props felipedjinn."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed \"Creating default object from empty value\""
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Text Domain To Plugin"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Tested To 3.5"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add \"Ratings\" Column To Manage Pages In WP-Admin"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add Sortable \"Ratings\" Column To Manage Posts/Pages In WP-Admin"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Move AJAX Request to wp-admin/admin-ajax.php"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added nonce To AJAX Calls And Admin Pages"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added Support For Google Rich Snippet"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Escaped Hostname"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Ensure Ratings Post ID In Shortcode Is An Integer"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: XSS Vulnerability. Thanks Dion Hulse aka dd32"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Removed Global $post"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Works For WordPress 2.8 Only"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Javascript Now Placed At The Footer"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses jQuery Instead Of tw-sack"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Minified Javascript Instead Of Packed Javascript"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Renamed postratings-admin-js-packed.js To postratings-admin-js.js"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Renamed postratings-admin-js.js To postratings-admin-js.dev.js"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Renamed postratings-js-packed.js To postratings-js.js"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Renamed postratings-js.js To postratings-js.dev.js"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Translate Javascript Variables Using wp_localize_script()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added In Most Rated &amp; Highest Rated Pages To WP-Stats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added get_highest_score(), get_highest_score_category(), get_highest_score_range(), get_highest_score_range_category()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Use _n() Instead Of __ngettext() And _n_noop() Instead Of __ngettext_noop()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses New Widget Class From WordPress"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Merge Widget Code To wp-postratings.php And Remove wp-postratings-widget.php"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: get_highest_rated_tag() And get_lowest_rated_tag()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Uses $_SERVER['PHP_SELF'] With plugin_basename(<strong>FILE</strong>) Instead Of Just $_SERVER['REQUEST_URI']"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Ensure That Post Is Not A Revision"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Missing + Sign For Thumbs Up/Down Ratings If Score Is Positive"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Logged By Username Now Shows Ratings Results To Users Who Did Not Login"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Multiple Loops Filtered Not Cleared"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Works For WordPress 2.7 Only"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Load Admin JS And CSS Only In WP-PostRatings Admin Pages"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added postratings-admin-css.css For WP-PostRatings Admin CSS Styles"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Allow The Usage Of PNG Icons Or GIF Icons. See Usage Tab.*"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added get_lowest_rated_range() Function"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Right To Left Language Support by <a href=\"http://persian-programming.com/\" title=\"http://persian-programming.com/\">Kambiz R. Khojasteh</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added \"postratings-css-rtl.css\" by <a href=\"http://persian-programming.com/\" title=\"http://persian-programming.com/\">Kambiz R. Khojasteh</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added 3 Functions For Creating HTML Code Of Rating Images by <a href=\"http://persian-programming.com/\" title=\"http://persian-programming.com/\">Kambiz R. Khojasteh</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Call postratings_textdomain() In create_ratinglogs_table() and process_ratings() by <a href=\"http://persian-programming.com/\" title=\"http://persian-programming.com/\">Kambiz R. Khojasteh</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Replaced Template Variable Calculations With expand_ratings_template() by <a href=\"http://persian-programming.com/\" title=\"http://persian-programming.com/\">Kambiz R. Khojasteh</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added Filter expand_ratings_template For Localizing Digits by <a href=\"http://persian-programming.com/\" title=\"http://persian-programming.com/\">Kambiz R. Khojasteh</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses wp_register_style(), wp_print_styles(), plugins_url() And site_url()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: SSL Support"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Works For WordPress 2.6"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Renamed GET Variables sortby To r_sortby And orderby To r_orderby"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Renamed postratings-admin-js.php To postratings-admin-js.js and Move The Dynamic Javascript Variables To The PHP Pages"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Renamed postratings-js.php To postratings-js.js and Move The Dynamic Javascript Variables To The PHP Pages"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses postratings-js-packed.js And postratings-admin-js-packed.js"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: When Displaying The Ratings Given By Comment Author, It Check Against Cookie As Well As IP"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Better Translation Using __ngetext() by <a href=\"http://hweia.ru/\" title=\"http://hweia.ru/\">Anna Ozeritskaya</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: MYSQL Charset Issue Should Be Solved"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Removed WP-Cache Compatibility As It Is Not Tested"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Able To Use r_sortby And r_orderby in query_posts()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Works For WordPress 2.5 Only"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Removed 'postratings-usage.php'"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses ShortCode API"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Splitted Templates From PostRating Options Into Its Own File, 'postratings-templates.php'"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Able To Display The Ratings Given By Comment Author When Displaying Comments"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: WP-PostRatings Will Load 'postratings-css.css' Inside Your Theme Directory If It Exists. If Not, It Will Just Load The Default 'postratings-css.css' By WP-PostRatings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Use number_format_i18n() Instead Of number_format()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added Get Most/Highest Rated Post Within A Given Time Range Function"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added Get Most/Highest Rated Post By Category ID Within A Given Time Range Function"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added get_lowest_rated() Function"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added get_lowest_rated_category() Function"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added get_most_rated_category() Function"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Get Most Rated Is Now Under The Templates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Minimum Votes Options/Parameters Added To get_lowest_rated(), get_lowest_rated_category(), get_highest_rated(), get_highest_rated_category(), get_most_rated() and get_most_rated_category() Functions"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses /wp-postratings/ Folder Instead Of /postratings/"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses wp-postratings.php Instead Of postratings.php"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Move WP-PostRatings Stats Out Of postratings.php Into postrating-stats.php"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Thumbs Up/Down Post Should Get Sorted By Score Instead Of Average"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Increased The Length Of The Input Box For Individual Rating Value"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Manage Ratings Does Not Display \"Numbers\" Style Rating"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: %POST_EXCERPT% Variable Is Sometimes Empty"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Works For WordPress 2.3 Only"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Ability To Embed [ratings=1] Into Post/Excerpt, Where 1 Is The ID Of The Post/Page Ratings You Want To Display"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Ability To Embed [ratings_results=1] Into Post/Excerpt, Where 1 Is The ID Of The Post/Page Ratings Results You Want To Display"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Ability To Support Mutiple Categories For get_highest_rated_category(). By: <a href=\"http://pomoti.com\">Dirceu P. Junior</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Ability To Embed [ratings] Into Excerpt"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added Template For No Permission To Rate"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Ability To Filter Logs By Post ID, User and Rating"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added heart, heart_crystal, plusminus, plusminus_crystal, stars_crystal, thumbs, tickcross, tickcross_crystal and updown_crystal Rating Styles"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Supports Up/Down Or Thumbs Up/Thumbs Down Rating"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Supports Custom Image For Individual Rating Scale"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: WP-Cache Compatible By <a href=\"http://forums.lesterchan.net/index.php/topic,227.0.html\">Nir Aides</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Highest Rated Widge And Most Rated Widget Added"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Ability To Uninstall WP-PostRatings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Uses WP-Stats Filter To Add Stats Into WP-Stats Page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Some Translation Bug In postrating-usage.php"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Ratings Custom Fields Will Automatically Be Created With The Creation Of Each New Post/Page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added AJAX Style Option: \"Show Loading Image With Text\""
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added AJAX Style Option: \"Show Fading In And Fading Out Of Ratings\""
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Removed Ratings From Feed If Ratings Is Embedded Into The Post Using [ratings]"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Wrong URL For Page Under Top Rated/Highest Posts Listing"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Next/Previous Paging Bug In WP-Admin -&gt; Manage Ratings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Sort Most Rated Posts By Number Of Voters Followed By Post Average Ratings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Works For WordPress 2.1 Only"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Renamed postratings-js.js To postratings-js.php To Enable PHP Parsing"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added Function To Get Highest Rated Post By Category ID"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added The Ability For Each Rating Star To Have Its Own Text"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Highest Rated Post Is Now In The Templates For Easy Modification"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Usage Instructions Is Also Included Within The Plugin Itself"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Able To Delete Ratings Logs And Data By Post IDs"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Able To Uninstall WP-PostRatings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Localization WP-PostRatings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: snippet_text() Function Missing"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: AJAX Not Working On Servers Running On PHP CGI"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Highest Rated Post Is Now Based On The Ratings Followed By The Number Of Votes"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Added Some Default Styles To postratings-css.css To Ensure That WP-PostRatings Does Not Break"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Ability To Logged By UserName"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: get_highest_rated_sidebar(); To Display The Highest Rated Post On The Sidebar"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added CSS Class 'post-ratings-image' To All IMG Tags"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: If Site URL Doesn't Match WP Option's Site URL, WP-PostRatings Will Not Work"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Total Rating Votes Stats And Total Rating Users Stats Function Added"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Ratings Not Working On Physical Pages That Is Integrated Into WordPress"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Modified Get Most/Highest Rated Post Function"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Search Bots Unable To Index Site"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: AJAX Not Working In Opera Browser"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Fading In/Put Effect After You Rate A Post"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Rating Voting And Rating Results Are On The Same Image"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added Rating Option For Logging Method"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added Rating Option For Who Can Rate"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Added Rating Results Image To Get Highest Rated Stats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Rating Administration Panel And The Code That WP-PostRatings Generated Is XHTML 1.0 Transitional"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: AJAX Voting"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Block Search Bots From Voting"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FIXED: Hard Coded Table Name In Ratings Stats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "NEW: Initial Release"
+msgstr ""
+
+#. Found in faq header.
+msgid "How To Change Schema Type?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How To Display Comment Author Ratings?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How To use PNG images instead of GIF images?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How Does WP-PostRatings Load CSS?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How To Use Ratings Stats With Widgets?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How To Use Ratings Stats Outside WP Loop?"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Lowest Rated Post"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Lowest Rated Post By Tag"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Lowest Rated Post In A Category"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Highest Rated Post"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Highest Rated Post By Tag"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Highest Rated Post In A Category"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Highest Rated Post Within A Given Period"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Most Rated Post"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Most Rated Post In A Category"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Most Rated Post Within A Given Period"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Highest Score Post"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Highest Score Post In A Category"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Display Highest Score Post Within A Given Period"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Sort Highest/Lowest Rated Posts"
+msgstr ""
+
+#. Found in faq header.
+msgid "To Sort Most/Least Rated Posts"
+msgstr ""
+
+#. Found in faq list item.
+msgid "The default schema type is 'Article', if you want to change it to 'Recipe', you need to make use of the <code>wp_postratings_schema_itemtype</code> filter as shown in the sample code below:"
+msgstr ""
+
+#. Found in faq list item.
+msgid "By default, the comment author ratings are not displayed. If you want to display the ratings, you need to make use of the <code>wp_postratings_display_comment_author_ratings</code> filter as shown in the sample code below:"
+msgstr ""
+
+#. Found in faq list item.
+msgid "The default image extension if 'gif', if you want to change it to 'png', you need to make use of the <code>wp_postratings_image_extension</code> filter as shown in the sample code below:"
+msgstr ""
+
+#. Found in faq list item.
+msgid "WP-PostRatings will load <code>postratings-css.css</code> from your theme's directory if it exists."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If it doesn't exists, it will just load the default 'postratings-css.css' that comes with WP-PostRatings."
+msgstr ""
+
+#. Found in faq list item.
+msgid "This will allow you to upgrade WP-PostRatings without worrying about overwriting your ratings styles that you have created."
+msgstr ""
+
+#. Found in faq list item.
+msgid "Go to <code>WP-Admin -&gt; Appearance -&gt; Widgets</code>"
+msgstr ""
+
+#. Found in faq list item.
+msgid "The widget name is Ratings."
+msgstr ""
+
+#. Found in faq list item.
+msgid "Use:"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_lowest_rated('both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "The value 'both' will display both the lowest rated posts and pages."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If you want to display the lowest rated posts only, replace 'both' with 'post'."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If you want to display the lowest rated pages only, replace 'both' with 'page'."
+msgstr ""
+
+#. Found in faq list item.
+msgid "The value 0 refers to the minimum votes required before the post get shown."
+msgstr ""
+
+#. Found in faq list item.
+msgid "The value 10 will display only the top 10 lowest rated posts/pages."
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_lowest_rated_tag(TAG_ID, 'both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Replace TAG_ID will your tag ID. If you want it to span several categories, replace TAG_ID with array(1, 2) where 1 and 2 are your categories ID."
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_lowest_rated_category(CATEGORY_ID, 'both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Replace CATEGORY_ID will your category ID. If you want it to span several categories, replace CATEGORY_ID with array(1, 2) where 1 and 2 are your categories ID."
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_highest_rated('both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "The value 'both' will display both the highest rated posts and pages."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If you want to display the highest rated posts only, replace 'both' with 'post'."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If you want to display the highest rated pages only, replace 'both' with 'page'."
+msgstr ""
+
+#. Found in faq list item.
+msgid "The value 10 will display only the top 10 highest rated posts/pages."
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_highest_rated_tag(TAG_ID, 'both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_highest_rated_category(CATEGORY_ID, 'both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_highest_rated_range('1 day', 'both', 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "The value '1 day' will be the range that you want. You can use '2 days', '1 month', etc."
+msgstr ""
+
+#. Found in faq list item.
+msgid "The value 'both' will display both the most rated posts and pages."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If you want to display the most rated posts only, replace 'both' with 'post'."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If you want to display the most rated pages only, replace 'both' with 'page'."
+msgstr ""
+
+#. Found in faq list item.
+msgid "The value 10 will display only the top 10 most rated posts/pages."
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_most_rated('both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_most_rated_category(CATEGORY_ID, 'both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_most_rated_range('1 day', 'both', 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_highest_score('both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_highest_score_category(CATEGORY_ID, 'both', 0, 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Default: get_highest_score_range('1 day', 'both', 10)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "You can use: <code>&lt;?php query_posts( array( 'meta_key' =&gt; 'ratings_average', 'orderby' =&gt; 'meta_value_num', 'order' =&gt; 'DESC' ) ); ?&gt;</code>"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Or pass in the variables to the URL: <code>http://yoursite.com/?r_sortby=highest_rated&amp;amp;r_orderby=desc</code>"
+msgstr ""
+
+#. Found in faq list item.
+msgid "You can replace desc with asc if you want the lowest rated posts."
+msgstr ""
+
+#. Found in faq list item.
+msgid "You can use: <code>&lt;?php query_posts( array( 'meta_key' =&gt; 'ratings_users', 'orderby' =&gt; 'meta_value_num', 'order' =&gt; 'DESC' ) ); ?&gt;</code>"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Or pass in the variables to the URL: <code>http://yoursite.com/?r_sortby=most_rated&amp;amp;r_orderby=desc</code>"
+msgstr ""
+
+#. Found in faq list item.
+msgid "You can replace desc with asc if you want the least rated posts."
+msgstr ""
+
+#. Found in remaining content header.
+msgid "Upgrading"
+msgstr ""
+
+#. Found in remaining content list item.
+msgid "Deactivate <code>WP-PostRatings</code> Plugin"
+msgstr ""
+
+#. Found in remaining content list item.
+msgid "Put/Overwrite: <code>Folder: wp-postratings</code>"
+msgstr ""
+
+#. Found in remaining content list item.
+msgid "Go to <code>WP-Admin -&gt; Ratings -&gt; Ratings Templates</code> and restore all the template variables to <code>Default</code>"
+msgstr ""
+
+#. Found in remaining content list item.
+msgid "Go to <code>WP-Admin -&gt; Appearance -&gt; Widgets</code> and re-add the Ratings Widget"
+msgstr ""
