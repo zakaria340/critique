@@ -96,6 +96,7 @@ options.mobile = {"showTrigger": false};
 
 			disableEditor(!$('#rw_custom_settings_enabled').prop('checked'));
 
+js_editor.setOptions({showTooltip: true});
 			function disableEditor(is_disabled) {
 				if (is_disabled) {
 					js_editor.setOptions({
