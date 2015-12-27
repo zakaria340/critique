@@ -40,7 +40,7 @@ $imgsrc = $img[0];
 <?php the_category(',&nbsp;',''); ?>
 </p>
 <div class="score">
-<div class="rank"><?php rw_get_post_rating($post->ID); ?></div>
+<div class="rank"></div>
 <div class="stars">
 
 </div>
