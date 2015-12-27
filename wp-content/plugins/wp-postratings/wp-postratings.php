@@ -38,7 +38,7 @@ define( 'WP_POSTRATINGS_VERSION', 1.83 );
 add_action( 'init', 'postratings_init' );
 function postratings_init() {
 	if( ! defined( 'RATINGS_IMG_EXT' ) ) {
-		define( 'RATINGS_IMG_EXT', apply_filters( 'wp_postratings_image_extension', 'gif' ) );
+		define( 'RATINGS_IMG_EXT', apply_filters( 'wp_postratings_image_extension', 'png' ) );
 	}
 }
 
