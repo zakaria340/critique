@@ -1,0 +1,12 @@
+/* 
+* Plugin Name: WP Review
+* Plugin URI: http://mythemeshop.com/plugins/wp-review/
+*/
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'font-icons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+}
+ 
+.icon-star { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
