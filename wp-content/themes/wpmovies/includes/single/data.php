@@ -42,7 +42,6 @@ $imgsrc = $img[0];
 <div class="score">
 <div class="rank"><?php rw_get_post_rating($post->ID); ?></div>
 <div class="stars">
-<?php  if(function_exists('the_ratings')) { the_ratings(); } ?> 
 
 </div>
 </div>
