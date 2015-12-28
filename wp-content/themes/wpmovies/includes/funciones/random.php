@@ -1,6 +1,10 @@
 <div id="owl-demo2" class="owl-carousel owl-theme">
 <?php  $rand_posts = get_posts('numberposts=20&orderby=rand'); foreach( $rand_posts as $post ) : ?>
-<?php   if (has_post_thumbnail()) {
+<?php 
+$post_ratings_data = get_post_custom($post->ID);
+	$post_ratings_average = is_array($post_ratings_data) && array_key_exists('ratings_average', $post_ratings_data) ? floatval($post_ratings_data['ratings_average'][0]) : 0;
+	
+if (has_post_thumbnail()) {
 $imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'home');
 $imgsrc = $imgsrc[0];
 } elseif ($postimages = get_children("post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=0")) {
@@ -18,7 +22,7 @@ $imgsrc = $img[0];
   <a href="<?php the_permalink() ?>">
   <div class="imgss">
   <img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" width="100%" height="100%" />
-  <?php if($values = get_post_custom_values("imdbRating")) { ?><div class="imdb"><span class="icon-grade"></span> <?php echo $values[0]; ?></div><?php } ?>
+  <div class="imdb"><span class="icon-grade"></span> <?php echo $post_ratings_average; ?></div>
   </div>
   </a>
   <span class="ttps"><?php the_title(); ?></span>
