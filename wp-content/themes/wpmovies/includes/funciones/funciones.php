@@ -402,13 +402,18 @@ $imgsrc = $match[1];
 } else {
 $img = get_post_custom_values("poster_url");
 $imgsrc = $img[0];
-} ?>
+} 
+$post_ratings_data = get_post_custom($post->ID);
+	$post_ratings_average = is_array($post_ratings_data) && array_key_exists('ratings_average', $post_ratings_data) ? floatval($post_ratings_data['ratings_average'][0]) : 0;
+	
+?>
 <a href="<?php the_permalink() ?>">
 <div class="movie-r">
 <div class="image-r"><img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" /></div>
 <div class="data-r">
 <h4><?php the_title(); ?></h4>
-<?php if($values = get_post_custom_values("imdbRating")) { ?><span class="rating"><?php echo $values[0]; ?></span><?php } ?>
+
+<span class="rating"><?php echo $post_ratings_average; ?></span>
 <?php if($values = get_post_custom_values("Runtime")) { ?><span class="rating-b"><b class="icon-query-builder"></b> <?php echo $values[0]; ?></span><?php } ?>
 </div>
 </div>
@@ -442,14 +447,18 @@ $imgsrc = $match[1];
 } else {
 $img = get_post_custom_values("poster_url");
 $imgsrc = $img[0];
-} ?>
+} 
+$post_ratings_data = get_post_custom($post->ID);
+	$post_ratings_average = is_array($post_ratings_data) && array_key_exists('ratings_average', $post_ratings_data) ? floatval($post_ratings_data['ratings_average'][0]) : 0;
+	
+?>
 <a href="<?php the_permalink() ?>">
 <div class="movie-r">
 <div class="image-r"><img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" /></div>
 <div class="data-r">
 <h4><?php the_title(); ?></h4>
 <?php if($values = get_post_custom_values("imdbRating")) { ?><span class="rating"><?php echo $values[0]; ?></span><?php } ?>
-<?php if($values = get_post_custom_values("imdbVotes")) { ?><span class="rating-b"><b class="icon-thumb-up"></b> <?php echo $values[0]; ?></span><?php } ?>
+<span class="rating-b"><b class="icon-thumb-up"></b> <?php echo $post_ratings_average; ?></span>
 </div>
 </div>
 </a>
