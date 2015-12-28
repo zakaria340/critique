@@ -4,11 +4,11 @@
 <div class="header">
 <?php $logo = get_option('general-logo');if (!empty($logo)) { ?>
 <div class="logo">
-<a href="<?php bloginfo('url'); ?>/"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name') ?>" /></a>
+<a href="<?php bloginfo('url'); ?>/">Critique.ma</a>
 </div>
 <?php } else { ?>
 <div class="logo">
-<a href="<?php bloginfo('url'); ?>/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name') ?>" /></a>
+<a href="<?php bloginfo('url'); ?>/">Critique.ma</a>
 </div>
 <?php } ?>
 <?php echo buscador_form_home(); ?>
