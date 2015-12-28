@@ -34,7 +34,8 @@
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); 
 
-     var_dump($post);die;
+$post_ratings_data = get_post_custom($post->ID);
+     var_dump($post_ratings_data);die;
 if (has_post_thumbnail()) {
 $imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'home');
 $imgsrc = $imgsrc[0];
