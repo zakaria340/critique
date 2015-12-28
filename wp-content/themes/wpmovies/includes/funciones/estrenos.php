@@ -18,7 +18,9 @@ $imgsrc = $img[0];
   <a href="<?php the_permalink() ?>">
   <div class="imgss">
   <img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" width="100%" height="100%" />
-  <?php if($values = get_post_custom_values("imdbRating")) { ?><div class="imdb"><span class="icon-grade"></span> <?php echo $values[0]; ?></div><?php } ?>
+  <?php $post_ratings_data = get_post_custom($post->ID);
+	$post_ratings_average = is_array($post_ratings_data) && array_key_exists('ratings_average', $post_ratings_data) ? floatval($post_ratings_data['ratings_average'][0]) : 0;
+	 ?><div class="imdb"><span class="icon-grade"></span> <?php echo $post_ratings_average; ?></div>
   </div>
   </a>
 
