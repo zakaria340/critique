@@ -8,6 +8,10 @@
 </ul>
 </div> 
 <?php } ?>
+
+
+
+<div itemscope itemtype="http://schema.org/Movie">
 <div class="headingder">
 <div class="cover"<?php if($values = get_post_custom_values("cover_url")) { ?> style="background-image: url(<?php echo $values[0]; ?>);"<?php } else { ?> style="background-image: url(<?php echo $imgsrc; $imgsrc = ''; ?>);"<?php } ?> ></div>
 <div class="datos" style="background: transparent;margin-bottom: 0;">
@@ -28,7 +32,7 @@ $imgsrc = $img[0];
 ?>
 <div class="imgs tsll"><a href="#dato-2"><img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" /></a></div><!-- imgs -->
 <div class="dataplus">
-<h1><?php the_title(); ?></h1>
+<h1 itemprop="name"><?php the_title(); ?></h1>
 <?php if($values = get_post_custom_values("Title")) { ?><span class="original"><?php echo $values[0]; ?></span><?php } ?>
 <div id="dato-1" class="data-content">
 <p>
@@ -44,8 +48,7 @@ $imgsrc = $img[0];
 <?php  if(function_exists('the_ratings')) { the_ratings(); } ?> 
 
 </div>
-
-<div class="xmll"><p class="xcsd"><?php echo get_the_term_list($post->ID, ''.$director.'', '<b class="icon-bullhorn"></b> &nbsp;', ', ', ''); ?></p></div>
+<div class="xmll"><p itemprop="director" itemscope itemtype="http://schema.org/Person" class="xcsd"><span itemprop="name"><?php echo get_the_term_list($post->ID, ''.$director.'', '<b class="icon-bullhorn"></b> &nbsp;', ', ', ''); ?></span></p></div>
 <div class="xmll"><p class="xcsd"><?php echo get_the_term_list($post->ID, ''.$actor.'', '<b class="icon-star"></b> &nbsp;', ', ', ''); ?> </p></div>
 <?php if($values = get_post_custom_values("Released")) { ?><div class="xmll"><p class="xcsd"><b class="icon-check"></b> <?php echo $values[0]; ?></p></div><?php } ?> 
 <?php if($values = get_post_custom_values("Awards")) { ?><div class="xmll"><p class="xcsd"><b class="icon-trophy"></b> <?php echo $values[0]; ?></p></div><?php } ?> 
@@ -53,7 +56,7 @@ $imgsrc = $img[0];
 </div>
 <div id="dato-2" class="data-content tsll">
 <h2><?php _e('Synopsis','mundothemes'); ?></h2>
-<?php the_content(); ?>
+<span itemprop="description"><?php the_content(); ?></span>
 <div class="tsll">
 <a class="regresar" href="#dato-1"><b class="icon-chevron-left2"></b> <?php if($tex = get_option('text-50')) { echo $tex; } else { _e('Go back','mundothemes'); } ?></a>
 </div>
@@ -61,5 +64,4 @@ $imgsrc = $img[0];
 </div><!-- dataplus -->
 </div>
 </div><!-- headingder -->
-
-
+</div>
