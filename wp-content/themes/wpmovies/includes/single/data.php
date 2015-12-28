@@ -40,11 +40,9 @@ $imgsrc = $img[0];
 <?php the_category(',&nbsp;',''); ?>
 </p>
 <div class="score">
-<div class="rank"></div>
-<div class="stars">
+
 <?php  if(function_exists('the_ratings')) { the_ratings(); } ?> 
 
-</div>
 </div>
 
 <div class="xmll"><p class="xcsd"><?php echo get_the_term_list($post->ID, ''.$director.'', '<b class="icon-bullhorn"></b> &nbsp;', ', ', ''); ?></p></div>
