@@ -591,9 +591,14 @@ function process_ratings() {
 
 		// Verify Referer
 		if(!check_ajax_referer('postratings_'.$post_id.'-nonce', 'postratings_'.$post_id.'_nonce', false))
+
 		{
-			_e('Failed To Verify Referrer', 'wp-postratings');
-			exit();
+
+			//_e('Failed To Verify Referrer', 'wp-postratings');
+			_e('', 'wp-postratings');
+
+			//exit();
+
 		}
 
 		if($rate > 0 && $post_id > 0 && check_allowtorate()) {
