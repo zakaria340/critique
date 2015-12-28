@@ -3,7 +3,7 @@
 <div class="logo">
 <a class="movies_a" href="<?php bloginfo('url'); ?>">
 <?php $logo = get_option('general-logo-responsive');if (!empty($logo)) { ?>
-<img src="<?php echo $logo; ?>" alt="<?php bloginfo('name') ?>" />
+Critique.ma
 <?php } else { ?>
 <b class="icon-home"></b>
 <?php } ?>
