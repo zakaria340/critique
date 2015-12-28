@@ -33,6 +33,8 @@
 <div id="box_movies">
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); 
+
+     var_dump($post);die;
 if (has_post_thumbnail()) {
 $imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'home');
 $imgsrc = $imgsrc[0];
