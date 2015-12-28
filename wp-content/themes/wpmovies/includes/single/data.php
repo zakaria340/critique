@@ -49,7 +49,7 @@ $imgsrc = $img[0];
 
 </div>
 <div class="xmll"><p itemprop="director" itemscope itemtype="http://schema.org/Person" class="xcsd"><span itemprop="name"><?php echo get_the_term_list($post->ID, ''.$director.'', '<b class="icon-bullhorn"></b> &nbsp;', ', ', ''); ?></span></p></div>
-<div class="xmll"><p class="xcsd"><?php echo get_the_term_list($post->ID, ''.$actor.'', '<b class="icon-star"></b> &nbsp;', ', ', ''); ?> </p></div>
+<div class="xmll"><p itemprop="actor" itemscope itemtype="http://schema.org/Person" class="xcsd"><?php echo get_the_term_list($post->ID, ''.$actor.'', '<b class="icon-star"></b> &nbsp;<span itemprop="name">', ', ', '</span>'); ?> </p></div>
 <?php if($values = get_post_custom_values("Released")) { ?><div class="xmll"><p class="xcsd"><b class="icon-check"></b> <?php echo $values[0]; ?></p></div><?php } ?> 
 <?php if($values = get_post_custom_values("Awards")) { ?><div class="xmll"><p class="xcsd"><b class="icon-trophy"></b> <?php echo $values[0]; ?></p></div><?php } ?> 
 <div class="xmll"><p class="tsll xcsd"><b class="icon-info-circle"></b> <a href="#dato-2"><?php if($tex = get_option('text-28')) { echo $tex; } else { _e('Synopsis','mundothemes'); } ?></a></p></div>
