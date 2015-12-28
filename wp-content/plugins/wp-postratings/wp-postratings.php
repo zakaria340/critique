@@ -614,6 +614,17 @@ function process_ratings() {
 			postratings_textdomain();
 			$rated = check_rated($post_id);
 			// Check Whether Post Has Been Rated By User
+                        
+                        if($rated){
+                            $delete_logs = $wpdb->query( "DELETE FROM {$wpdb->ratings} WHERE rating_postid IN (" . $post_id . ')' );
+			
+				$ratings_postmeta = array( 'ratings_users', 'ratings_score', 'ratings_average', );
+					foreach( $ratings_postmeta as $meta_key ) {
+						delete_post_meta( $post_id, $meta_key );
+					}
+				$rated = false;
+                        }
+                        
 			if(!$rated) {
 				// Check Whether Is There A Valid Post
 				$post = get_post($post_id);
@@ -665,13 +676,7 @@ function process_ratings() {
 					exit();
 				} // End if($post)
 			} else {
-                            	$delete_logs = $wpdb->query( "DELETE FROM {$wpdb->ratings} WHERE rating_postid IN (" . $post_id . ')' );
-			
-				$ratings_postmeta = array( 'ratings_users', 'ratings_score', 'ratings_average', );
-					foreach( $ratings_postmeta as $meta_key ) {
-						delete_post_meta( $post_id, $meta_key );
-					}
-				
+                            	
 				printf(__('You Had Already Rated This Post. Post ID #%s.', 'wp-postratings'), $post_id);
 				exit();
 			}// End if(!$rated)
