@@ -16,3 +16,6 @@ span{filter:Alpha(Opacity=100);opacity:1}.owl-theme .owl-controls .owl-page span
 .rw-ui-container.rw-dir-ltr .rw-report-link, .rw-ui-container.rw-valign-middle.rw-halign-right .rw-report-link {
     display: none !important;
 }
+body {
+    font-style: normal !important;
+}
