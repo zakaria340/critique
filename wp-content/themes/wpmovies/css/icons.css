@@ -41,3 +41,6 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 #largo .contenido .header .data h3, .sidebar_right .links h3, .sidebar_right .links h3 {
     font-family: Open sans;
 }
+.relacionados .movie-r .data-r h4 {
+    font-size: 13px;
+}
