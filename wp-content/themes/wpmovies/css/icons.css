@@ -35,3 +35,9 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
     margin-right: 1px;
     padding-right: 2px;
 }
+#largo .contenido .header .data ul.generos li a, .relacionados .movie-r .data-r h4 {
+    font-family: "Quicksand";
+}
+#largo .contenido .header .data h3, .sidebar_right .links h3, .sidebar_right .links h3 {
+    font-family: Open sans;
+}
