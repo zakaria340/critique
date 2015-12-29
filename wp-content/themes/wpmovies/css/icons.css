@@ -12,9 +12,15 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
     font-size: 12px;
 }
 .sidebar_right .links ul.lista li a {
-    font-family: Open sans;
+    font-family: "Open sans";
     font-size: 13px;
 }
 #largo .contenido .header .logo {
     font-family: "Dancing Script" !important;
+}
+.dataplus a {
+    color: #fff;
+    font-family: Quicksands;
+    font-size: 12px;
+    text-transform: inherit;
 }
