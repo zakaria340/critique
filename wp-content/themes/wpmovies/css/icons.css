@@ -20,7 +20,12 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 }
 .dataplus a {
     color: #fff;
-    font-family: Quicksands;
+    font-family: "Quicksand";
     font-size: 12px;
     text-transform: inherit;
+}
+
+#movie .post .datos .dataplus h1 {
+    font-family: Quicksand;
+    font-size: 33px;
 }
