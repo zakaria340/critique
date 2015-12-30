@@ -616,12 +616,8 @@ function process_ratings() {
 			// Check Whether Post Has Been Rated By User
                         
                         if($rated){
-                            $delete_logs = $wpdb->query( "DELETE FROM {$wpdb->ratings} WHERE rating_postid IN (" . $post_id . ')' );
+                            $delete_logs = $wpdb->query( "DELETE FROM {$wpdb->ratings} WHERE rating_postid IN (" . $post_id . ')  AND rating_userid =  '.$user_ID.'' );
 			
-				$ratings_postmeta = array( 'ratings_users', 'ratings_score', 'ratings_average', );
-					foreach( $ratings_postmeta as $meta_key ) {
-						delete_post_meta( $post_id, $meta_key );
-					}
 				$rated = false;
                         }
                         
