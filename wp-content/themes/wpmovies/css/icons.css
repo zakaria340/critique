@@ -44,3 +44,19 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 .relacionados .movie-r .data-r h4 {
     font-size: 13px;
 }
+#contenedor .items .it_header h1 {
+    color: #59626b;
+    font-family: "Quicksand";
+}
+
+.header_slider span.titulo_2 {
+    color: #59626b;
+    font-family: Quicksand;
+}
+#wc-comment-header {
+    font-family: Quicksand;
+    font-size: 26px;
+}
+#comments span, #comments p {
+      font-family: Quicksand;
+}
