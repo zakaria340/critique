@@ -621,6 +621,9 @@ function process_ratings() {
             if ($rated) {
                 $get_rated = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->ratings} WHERE rating_postid = %d AND rating_userid = %d", $post_id, $user_ID));
                 $post_ratings = get_post_custom($post_id);
+                $post_ratings_users = !empty($post_ratings['ratings_users']) ? intval($post_ratings['ratings_users'][0]) : 0;
+                $post_ratings_score = !empty($post_ratings['ratings_score']) ? intval($post_ratings['ratings_score'][0]) : 0;
+
                 // Check For Ratings Lesser Than 1 And Greater Than $ratings_max
 
                 $post_ratings_users = ($post_ratings_users - 1);
