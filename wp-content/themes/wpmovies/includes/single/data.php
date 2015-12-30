@@ -66,7 +66,6 @@ $imgsrc = $img[0];
 <div class="imgs tsll"><a href="#dato-2"><img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" /></a></div><!-- imgs -->
 <div class="dataplus">
 <h1 itemprop="name"><?php the_title(); ?></h1>
-<?php wpfp_link() ?>
 <?php if($values = get_post_custom_values("Title")) { ?><span class="original"><?php echo $values[0]; ?></span><?php } ?>
 <div id="dato-1" class="data-content">
 <p>
@@ -87,6 +86,7 @@ $imgsrc = $img[0];
 <?php if($values = get_post_custom_values("Released")) { ?><div class="xmll"><p class="xcsd"><b class="icon-check"></b> <?php echo $values[0]; ?></p></div><?php } ?> 
 <?php if($values = get_post_custom_values("Awards")) { ?><div class="xmll"><p class="xcsd"><b class="icon-trophy"></b> <?php echo $values[0]; ?></p></div><?php } ?> 
 <div class="xmll"><p class="tsll xcsd"><b class="icon-info-circle"></b> <a href="#dato-2"><?php if($tex = get_option('text-28')) { echo $tex; } else { _e('Synopsis','mundothemes'); } ?></a></p></div>
+<div class="xmll"><p class="tsll xcsd"><b class="icon-bookmark"></b><?php wpfp_link() ?></p></div>
 </div>
 <div id="dato-2" class="data-content tsll">
 <h2><?php _e('Synopsis','mundothemes'); ?></h2>
