@@ -1,4 +1,37 @@
-<?php if (current_user_can('update_core')) { ?>
+<?php
+
+function get_the_term_list_mine( $id, $taxonomy, $before = '', $sep = '', $after = '') {
+    $terms = get_the_terms( $id, $taxonomy );
+
+	if ( is_wp_error( $terms ) )
+		return $terms;
+
+	if ( empty( $terms ) )
+		return false;
+
+	foreach ( $terms as $term ) {
+		$link = get_term_link( $term, $taxonomy );
+		if ( is_wp_error( $link ) )
+			return $link;
+		$term_links[] = '<span itemprop="name"><a href="' . esc_url( $link ) . '" rel="tag">' . $term->name . '</a></span>';
+	}
+
+	/**
+	 * Filter the term links for a given taxonomy.
+	 *
+	 * The dynamic portion of the filter name, `$taxonomy`, refers
+	 * to the taxonomy slug.
+	 *
+	 * @since 2.5.0
+	 *
+	 * @param array $term_links An array of term links.
+	 */
+	$term_links = apply_filters( "term_links-$taxonomy", $term_links );
+
+	return $before . join( $sep, $term_links ) . $after;
+}
+
+if (current_user_can('update_core')) { ?>
 <div class="menu-admin">
 <ul>
 <?php edit_post_link( __( 'Edit post', 'mundothemes' ), '<li><b>', '</b></li>' ); ?>
@@ -49,7 +82,7 @@ $imgsrc = $img[0];
 
 </div>
 <div class="xmll"><p itemprop="director" itemscope itemtype="http://schema.org/Person" class="xcsd"><span itemprop="name"><?php echo get_the_term_list($post->ID, ''.$director.'', '<b class="icon-bullhorn"></b> &nbsp;', ', ', ''); ?></span></p></div>
-<div class="xmll"><p itemprop="actor" itemscope itemtype="http://schema.org/Person" class="xcsd"><?php echo get_the_term_list($post->ID, ''.$actor.'', '<b class="icon-star"></b> &nbsp;<span itemprop="name">', ', ', '</span>'); ?> </p></div>
+<div class="xmll"><p itemprop="actor" itemscope itemtype="http://schema.org/Person" class="xcsd"><?php echo get_the_term_list_mine($post->ID, ''.$actor.'', '<b class="icon-star"></b> &nbsp;', ', ', ''); ?> </p></div>
 <?php if($values = get_post_custom_values("Released")) { ?><div class="xmll"><p class="xcsd"><b class="icon-check"></b> <?php echo $values[0]; ?></p></div><?php } ?> 
 <?php if($values = get_post_custom_values("Awards")) { ?><div class="xmll"><p class="xcsd"><b class="icon-trophy"></b> <?php echo $values[0]; ?></p></div><?php } ?> 
 <div class="xmll"><p class="tsll xcsd"><b class="icon-info-circle"></b> <a href="#dato-2"><?php if($tex = get_option('text-28')) { echo $tex; } else { _e('Synopsis','mundothemes'); } ?></a></p></div>
