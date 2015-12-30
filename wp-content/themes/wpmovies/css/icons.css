@@ -61,6 +61,6 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
       font-family: Quicksand;
 }
 #movie .watchlists p span {
-    background: none;
-    border: none;
+    background: none !important;
+    border: none !important;
 }
