@@ -60,3 +60,7 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 #comments span, #comments p {
       font-family: Quicksand;
 }
+#movie .watchlists p span {
+    background: none;
+    border: none;
+}
