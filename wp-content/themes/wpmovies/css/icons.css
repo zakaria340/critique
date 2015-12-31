@@ -67,3 +67,22 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 .headingder .cover {
     opacity: 0.4;
 }
+.bloc_homepage {
+    background-color: #22262c;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    margin-top: 70px;
+}
+.hint-action {
+    color: white;
+    display: inline-block;
+    font-family: Quicksand;
+    font-size: 13px;
+    margin-left: 10px;
+    text-align: center;
+    width: 30%;
+}
+.hint-action-title {
+    color: green;
+    font-size: 22px;
+}
