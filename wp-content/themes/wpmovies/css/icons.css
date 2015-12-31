@@ -86,3 +86,10 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
     color: green;
     font-size: 22px;
 }
+.bloc_homepage .title-bloc-homepage {
+      color: green;
+    font-family: Quicksand;
+    font-size: 13px;
+    margin-left: 10px;
+    text-align: center;
+}
