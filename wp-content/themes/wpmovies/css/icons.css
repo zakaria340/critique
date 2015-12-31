@@ -83,11 +83,11 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
     width: 30%;
 }
 .hint-action-title {
-    color: green;
+    color: rgba(255, 255, 255, 0.35);
     font-size: 22px;
 }
 .bloc_homepage .title-bloc-homepage {
-      color: green;
+      color: rgba(255, 255, 255, 0.35);
     font-family: Quicksand;
     font-size: 13px;
     margin-left: 10px;
