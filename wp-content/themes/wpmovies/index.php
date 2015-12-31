@@ -15,7 +15,7 @@
 
   <ul class="d-grid">
   
- <span>    Car nous croyons à la puissance de la communaité.  Donnez votre avis, faites entendre votre voix! .  </span>
+ <span class="title-bloc-homepage">    Car nous croyons à la puissance de la communaité.  Donnez votre avis, faites entendre votre voix! .  </span>
   
 			<li class="first-action hint-action" style="">
 				<span class="icon-bookmark"></span>
