@@ -93,3 +93,7 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
     margin-left: 10px;
     text-align: center;
 }
+#wpcomm .wc-field-comment textarea, #wpcomm .wc-comment .wc-comment-right textarea {
+    font-family: Quicksand;
+    height: 200px;
+}
