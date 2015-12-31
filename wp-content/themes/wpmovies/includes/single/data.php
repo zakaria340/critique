@@ -63,7 +63,7 @@ $img = get_post_custom_values("poster_url");
 $imgsrc = $img[0];
 }
 ?>
-<div class="imgs tsll"><a href="#dato-2"><img src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" /></a></div><!-- imgs -->
+<div class="imgs tsll"><a href="#dato-2"><img itemprop="image" src="<?php echo $imgsrc; $imgsrc = ''; ?>" alt="<?php the_title(); ?>" /></a></div><!-- imgs -->
 <div class="dataplus">
 <h1 itemprop="name"><?php the_title(); ?></h1>
 <?php if($values = get_post_custom_values("Title")) { ?><span class="original"><?php echo $values[0]; ?></span><?php } ?>
