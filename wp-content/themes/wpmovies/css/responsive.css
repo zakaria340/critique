@@ -1,10 +1,16 @@
 @media only screen and (max-width: 1366px) {
+        .bloc_homepage {
+        display: none;
+    }
     .items .movie {
         width: 18%;
         margin-right: 1.6%;
     }
 }
 @media only screen and (max-width: 1024px) {
+        .bloc_homepage {
+        display: none;
+    }
     #contenedor .sidebar_right {
         display: none;
     }
@@ -17,12 +23,18 @@
     }
 }
 @media only screen and (max-width: 966px) {
+        .bloc_homepage {
+        display: none;
+    }
     .items .movie {
         width: 17%;
         margin-right: 2.9%;
     }
 }
 @media only screen and (max-width: 768px) {
+    .bloc_homepage {
+        display: none;
+    }
     #movie {
         max-width: 100%;
     }
@@ -98,6 +110,9 @@
     }
 }
 @media only screen and (max-width: 736px) {
+        .bloc_homepage {
+        display: none;
+    }
     .footer_c .brand {
         display: none;
     }
