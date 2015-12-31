@@ -10,6 +10,33 @@
 <?php echo buscador_form(); ?>
 </div>
 </div>
+    
+<div class="bloc_homepage">
+
+  <ul class="d-grid">
+  
+ <span>    Car nous croyons à la puissance de la communaité.  Donnez votre avis, faites entendre votre voix! .  </span>
+  
+			<li class="first-action hint-action" style="">
+				<span class="icon-bookmark"></span>
+				<span class="hint-action-title">Découvrez</span>
+				<p class="hint-action-description">Découvrez des films qui correspondent à vos goûts, et dévouvrez la cinéma marocaine plus que jamais</p>
+			</li>
+			<li class="second-action hint-action">
+				<span class="icon-star2"></span>
+				<span class="hint-action-title">Notez</span>
+				<p class="hint-action-description">Evaluez les films que vous avez vus. Classez-les selon vos critères et donnez votre avis détaillé dans une critique. 				</p>
+			</li>
+			<li class="third-action hint-action">
+				<span class="icon-plus-circle"></span>
+				<span class="hint-action-title">Partagez</span>
+				<p class="hint-action-description">Faites découvrir vos critiques et vos notes avec vos amis, conseillez leur ce qu'ils pourront aimer. 				</p>
+			</li>
+		</ul>
+  
+
+</div>
+    
 <?php function_exists('wp_nav_menu') && has_nav_menu('menu1' ); wp_nav_menu( array( 'theme_location' => 'menu1', 'container' => '',  'menu_class' => 'home_links') ); ?>
 <div class="header_slider">
 <span class="titulo_2">
