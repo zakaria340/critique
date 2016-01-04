@@ -103,3 +103,164 @@ $imgsrc = $img[0];
 </div>
 <?php include_once 'sidebar_right.php'; ?>
 <?php get_footer(); ?>
+
+
+<?php 
+
+
+
+
+
+
+
+
+
+// example of how to modify HTML contents
+include(ABSPATH . 'simple_html_dom.php');
+//
+//// get DOM from URL or file
+$html = file_get_html('http://www.cinetrafic.fr/liste-film/7920/1/les-meilleurs-films-marocains');
+//
+//// remove all image
+foreach ($html->find('#liste_film .liste_item_titre a.classic_link') as $element) {
+    $urlMovie = 'http://www.cinetrafic.fr' . $element->href;
+    $htmlMovie = file_get_html($urlMovie);
+    $cast = array();
+    foreach ($htmlMovie->find('#film_cast_name a') as $cas) {
+        $cast[] = $cas->innertext;
+    }
+    if ($htmlMovie) {
+        $genre = array();
+        if ($htmlMovie->find('#adn_liste_genre', 0)) {
+            foreach ($htmlMovie->find('#adn_liste_genre', 0)->find('a') as $gen) {
+                $sq = str_replace('Film', '', $gen->innertext);
+                $genre[] = utf8_decode(ucfirst(trim($sq)));
+            }
+        }
+        $title = $htmlMovie->find('h1 strong', 0)->innertext . 'film Bande annonce';
+        $title = str_replace(' ', '+', $title);
+
+        $htmlt = file_get_html('http://www.youtube.com/results?search_query=' . $title);
+
+        $liBandeAnnonce = $htmlt->find('#results .yt-lockup', 0);
+        $urlBandeAnnonce = '';
+        if($liBandeAnnonce){
+            
+        
+        $urlBandeAnnonce = 'http://www.youtube.com' . $liBandeAnnonce->find('a', 0)->href;
+}
+        $anne = $htmlMovie->find('.detail_film_info_value a', 1)->innertext;
+        $anne = str_replace('film', '', $anne);
+        $anne = str_replace('<strong>', '', $anne);
+        $anne = str_replace('</strong>', '', $anne);
+        $filmInfo = array(
+          'titre' => wp_specialchars(trim($htmlMovie->find('h1 strong', 0)->innertext)),
+          'image' => 'http://www.cinetrafic.fr' . $htmlMovie->find('.affiche_film', 0)->src,
+          'real' => $htmlMovie->find('#film_real_name a', 0)->innertext,
+          'cast' => $cast,
+          'genre' => $genre,
+          'annee' => trim($anne),
+          'duree' => $htmlMovie->find('.detail_film_info_value', 3)->innertext,
+          'synopsis' => utf8_decode(trim($htmlMovie->find('#bloc_content_synopsis', 0)->innertext)),
+          'trailer' => $urlBandeAnnonce,
+        );
+        saveMovie($filmInfo);
+    }
+}
+
+function saveMovie($data) {
+    $my_post = array(
+      'post_title' => $data['titre'],
+      'post_content' => $data['synopsis'],
+      'post_status' => 'publish',
+      'post_author' => 1,
+    );
+
+    if (empty(wp_exist_post_by_title($data['title']))) {
+        //Insert the post into the database
+        $postId = wp_insert_post($my_post);
+        wp_set_object_terms($postId, array($data['real']), 'director');
+        wp_set_object_terms($postId, array($data['real']), 'escritor');
+        wp_set_object_terms($postId, array($data['cast']), 'actor');
+        wp_set_object_terms($postId, array($data['genre']), 'category');
+        wp_set_object_terms($postId, array($data['annee']), 'year');
+
+        $image = my_attach_external_image($data['image'], $postId);
+        update_post_meta($postId, 'poster_url', $image);
+        update_post_meta($postId, 'embed_pelicula', $data['trailer']);
+        update_post_meta($postId, 'titulo_repro1', 'Bande annonce');
+
+        update_post_meta($postId, 'Title', $data['titre']);
+        update_post_meta($postId, 'Released', $data['annee']);
+        update_post_meta($postId, 'Runtime', $data['duree']);
+        update_post_meta($postId, 'Country', 'Maroc');
+    }
+}
+
+//$title = $title . 'film Bande annonce';
+//$title = str_replace(' ', '+', $title);
+//$html = file_get_html('http://www.youtube.com/results?search_query=' . $title);
+//$liBandeAnnonce = $html->find('#results li.yt-lockup', 0);
+//$urlBandeAnnonce = 'http://www.youtube.com' . $liBandeAnnonce->find('a', 0)->href;
+
+
+
+function wp_exist_post_by_title($title_str) {
+    global $wpdb;
+    return $wpdb->get_row("SELECT * FROM wp_posts WHERE post_title = '" . $title_str . "'", 'ARRAY_A');
+}
+
+function my_attach_external_image($url = null, $post_id = null, $post_data = array()) {
+    if (!$url || !$post_id)
+        return new WP_Error('missing', "Need a valid URL and post ID...");
+    require_once( ABSPATH . 'wp-admin/includes/file.php' );
+    // Download file to temp location, returns full server path to temp file, ex; /home/user/public_html/mysite/wp-content/26192277_640.tmp
+    $tmp = download_url($url);
+
+    // If error storing temporarily, unlink
+    if (is_wp_error($tmp)) {
+        @unlink($file_array['tmp_name']);   // clean up
+        $file_array['tmp_name'] = '';
+        return $tmp; // output wp_error
+    }
+
+    preg_match('/[^\?]+\.(jpg|JPG|jpe|JPE|jpeg|JPEG|gif|GIF|png|PNG)/', $url, $matches);    // fix file filename for query strings
+    $url_filename = basename($matches[0]);                                                  // extract filename from url for title
+    $url_type = wp_check_filetype($url_filename);                                           // determine file type (ext and mime/type)
+    // assemble file data (should be built like $_FILES since wp_handle_sideload() will be using)
+    $file_array['tmp_name'] = $tmp;                                                         // full server path to temp file
+
+    $file_array['name'] = $url_filename;
+
+    // set additional wp_posts columns
+    if (empty($post_data['post_title'])) {
+        $post_data['post_title'] = basename($url_filename, "." . $url_type['ext']);         // just use the original filename (no extension)
+    }
+
+    // make sure gets tied to parent
+    if (empty($post_data['post_parent'])) {
+        $post_data['post_parent'] = $post_id;
+    }
+
+    // required libraries for media_handle_sideload
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    require_once(ABSPATH . 'wp-admin/includes/media.php');
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
+
+    // do the validation and storage stuff
+    $att_id = media_handle_sideload($file_array, $post_id, null, $post_data);             // $post_data can override the items saved to wp_posts table, like post_mime_type, guid, post_parent, post_title, post_content, post_status
+
+    $filei = get_attached_file($att_id);
+    return 'http://www.critique.ma/wp-content/uploads/' . _wp_relative_upload_path($filei);
+    // If error storing permanently, unlink
+    if (is_wp_error($att_id)) {
+        @unlink($file_array['tmp_name']);   // clean up
+        return $att_id; // output wp_error
+    }
+
+    // set as post thumbnail if desired
+    set_post_thumbnail($post_id, $att_id);
+    return $att_id;
+}
+
+?>
