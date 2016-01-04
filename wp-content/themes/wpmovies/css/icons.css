@@ -87,11 +87,12 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
     font-size: 22px;
 }
 .bloc_homepage .title-bloc-homepage {
-      color: rgba(255, 255, 255, 0.35);
+    color: white;
     font-family: Quicksand;
     font-size: 13px;
     margin-left: 10px;
     text-align: center;
+    display: block;
 }
 #wpcomm .wc-field-comment textarea, #wpcomm .wc-comment .wc-comment-right textarea {
     font-family: Quicksand;
