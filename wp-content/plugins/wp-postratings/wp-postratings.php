@@ -1296,8 +1296,7 @@ function mine_expand_ratings_template($template, $post_data, $post_ratings_data 
     $value = str_replace("</li>", '', $value); 
     $value = str_replace("(", '', $value);
     $value = str_replace(")", '', $value);
-    $value = str_replace("%RATINGS_AVERAGE%", '', $value);
-    $value = str_replace("%RATINGS_MAX%", '', $value);
+
     if (strpos($template, '%RATINGS_IMAGES%') !== false) {
         $post_ratings_images = mine_get_ratings_images_vote($ratings_custom, $ratings_max, $post_ratings, $ratings_image, $post_ratings_alt_text, $insert_half);
         $value = str_replace("%RATINGS_IMAGES%", $post_ratings_images, $value);
