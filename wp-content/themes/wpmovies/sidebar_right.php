@@ -8,7 +8,7 @@
 
 
 
-<?php #include_once 'includes/funciones/mas_votados.php'; # top mas votados ?>
+<?php include_once 'includes/funciones/mas_votados.php'; # top mas votados ?>
 <?php include_once 'includes/funciones/mas_vistos.php'; # top mas vistos ?>
 
 <div class="links">
@@ -17,8 +17,8 @@
 <?php
 $cc = date('Y');
 $cd = date('Y')-50; 
-foreach (range($cc, $cd) as $número) { ?>
-<li><a class="ito" HREF="<?php bloginfo('url'); ?>/<?php echo $year_estreno; ?>/<?php echo $número; ?>"><?php echo $número; ?></a></li>
+foreach (range($cc, $cd) as $nï¿½mero) { ?>
+<li><a class="ito" HREF="<?php bloginfo('url'); ?>/<?php echo $year_estreno; ?>/<?php echo $nï¿½mero; ?>"><?php echo $nï¿½mero; ?></a></li>
 <?php } ?>
 </ul>
 </div>
