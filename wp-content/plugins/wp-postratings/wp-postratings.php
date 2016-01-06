@@ -1068,7 +1068,7 @@ function get_ratings_images($ratings_custom, $ratings_max, $post_rating, $rating
 ### Function: Gets HTML of rating images for voting
 
 function mine_get_ratings_images_vote($post_id, $ratings_custom, $ratings_max, $post_rating, $ratings_image, $image_alt, $insert_half, $ratings_texts) {
-    $ratings_images = '<div class="top-stars">';
+    $ratings_images = '<tag class="top-stars">';
     if (is_rtl() && file_exists(WP_PLUGIN_DIR . '/wp-postratings/images/' . $ratings_image . '/rating_start-rtl.' . RATINGS_IMG_EXT)) {
         $ratings_images .= '<img src="' . plugins_url('/wp-postratings/images/' . $ratings_image . '/rating_start-rtl.' . RATINGS_IMG_EXT) . '" alt="" class="post-ratings-image" />';
     } elseif (file_exists(WP_PLUGIN_DIR . '/wp-postratings/images/' . $ratings_image . '/rating_start.' . RATINGS_IMG_EXT)) {
@@ -1122,7 +1122,7 @@ function mine_get_ratings_images_vote($post_id, $ratings_custom, $ratings_max, $
     } elseif (file_exists(WP_PLUGIN_DIR . '/wp-postratings/images/' . $ratings_image . '/rating_end.' . RATINGS_IMG_EXT)) {
         $ratings_images .= '<img src="' . plugins_url('/wp-postratings/images/' . $ratings_image . '/rating_end.' . RATINGS_IMG_EXT) . '" alt="" class="post-ratings-image" />';
     }
-    $ratings_images.='</div>';
+    $ratings_images.='</tag>';
     return $ratings_images;
 }
 
