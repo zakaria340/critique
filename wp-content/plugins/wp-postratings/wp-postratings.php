@@ -1068,7 +1068,7 @@ function get_ratings_images($ratings_custom, $ratings_max, $post_rating, $rating
 ### Function: Gets HTML of rating images for voting
 
 function mine_get_ratings_images_vote($post_id, $ratings_custom, $ratings_max, $post_rating, $ratings_image, $image_alt, $insert_half, $ratings_texts) {
-    $ratings_images = '<tag class="top-stars">';
+    $ratings_images = '<div class="top-stars">';
     if (is_rtl() && file_exists(WP_PLUGIN_DIR . '/wp-postratings/images/' . $ratings_image . '/rating_start-rtl.' . RATINGS_IMG_EXT)) {
         $ratings_images .= '<img src="' . plugins_url('/wp-postratings/images/' . $ratings_image . '/rating_start-rtl.' . RATINGS_IMG_EXT) . '" alt="" class="post-ratings-image" />';
     } elseif (file_exists(WP_PLUGIN_DIR . '/wp-postratings/images/' . $ratings_image . '/rating_start.' . RATINGS_IMG_EXT)) {
@@ -1122,7 +1122,7 @@ function mine_get_ratings_images_vote($post_id, $ratings_custom, $ratings_max, $
     } elseif (file_exists(WP_PLUGIN_DIR . '/wp-postratings/images/' . $ratings_image . '/rating_end.' . RATINGS_IMG_EXT)) {
         $ratings_images .= '<img src="' . plugins_url('/wp-postratings/images/' . $ratings_image . '/rating_end.' . RATINGS_IMG_EXT) . '" alt="" class="post-ratings-image" />';
     }
-    $ratings_images.='</tag>';
+    $ratings_images.='</div>';
     return $ratings_images;
 }
 
@@ -1293,7 +1293,7 @@ function mine_expand_ratings_template($template, $post_data, $post_ratings_data 
     // Replace the variables
     $value = $template;
     if (strpos($template, '%RATINGS_IMAGES%') !== false) {
-        $post_ratings_images = '<tag>'.get_ratings_images_vote($ratings_custom, $ratings_max, $post_ratings, $ratings_image, $post_ratings_alt_text, $insert_half).'</tag>';
+        $post_ratings_images = get_ratings_images($ratings_custom, $ratings_max, $post_ratings, $ratings_image, $post_ratings_alt_text, $insert_half);
         $value = str_replace("%RATINGS_IMAGES%", $post_ratings_images, $value);
     }
     if (strpos($template, '%RATINGS_IMAGES_VOTE%') !== false) {
@@ -1318,7 +1318,6 @@ function mine_expand_ratings_template($template, $post_data, $post_ratings_data 
     $value = str_replace("%POST_TITLE%", '', $value);
     $value = str_replace("%POST_URL%", '', $value);
     
-    $value = strip_tags($value, '<img>');
     if (strpos($template, '%POST_EXCERPT%') !== false) {
         if (get_the_ID() != $post_id) {
             $post = &get_post($post_id);
