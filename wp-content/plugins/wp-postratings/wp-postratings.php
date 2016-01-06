@@ -1301,8 +1301,13 @@ function mine_expand_ratings_template($template, $post_data, $post_ratings_data 
         $post_ratings_images = mine_get_ratings_images_vote($post_id, $ratings_custom, $ratings_max, $post_ratings, $ratings_image, $post_ratings_alt_text, $insert_half, $ratings_texts);
         $value = str_replace("%RATINGS_IMAGES_VOTE%", $post_ratings_images, $value);
     }
- 
 
+    $value = str_replace("<li>", '', $value);
+    $value = str_replace("</li>", '', $value); 
+    $value = str_replace("(", '', $value);
+    $value = str_replace(")", '', $value);
+    $value = str_replace("%RATINGS_AVERAGE%", '', $value);
+    $value = str_replace("%RATINGS_MAX%", '', $value);
     // Post Template Variables
     $post_link = get_permalink($post_data);
     $post_title = get_the_title($post_data);
