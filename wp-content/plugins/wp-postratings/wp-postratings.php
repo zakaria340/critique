@@ -1317,7 +1317,7 @@ function mine_expand_ratings_template($template, $post_data, $post_ratings_data 
     $value = str_replace("%POST_ID%", $post_id, $value);
     $value = str_replace("%POST_TITLE%", '', $value);
     $value = str_replace("%POST_URL%", '', $value);
-    
+    $value = strip_tags($value, '<img>');
     if (strpos($template, '%POST_EXCERPT%') !== false) {
         if (get_the_ID() != $post_id) {
             $post = &get_post($post_id);
