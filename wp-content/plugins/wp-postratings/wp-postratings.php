@@ -1301,13 +1301,7 @@ function mine_expand_ratings_template($template, $post_data, $post_ratings_data 
         $post_ratings_images = mine_get_ratings_images_vote($post_id, $ratings_custom, $ratings_max, $post_ratings, $ratings_image, $post_ratings_alt_text, $insert_half, $ratings_texts);
         $value = str_replace("%RATINGS_IMAGES_VOTE%", $post_ratings_images, $value);
     }
-    $value = str_replace("%RATINGS_ALT_TEXT%", $post_ratings_alt_text, $value);
-    $value = str_replace("%RATINGS_TEXT%", $post_ratings_text, $value);
-    $value = str_replace("%RATINGS_MAX%", number_format_i18n($ratings_max), $value);
-    $value = str_replace("%RATINGS_SCORE%", $post_ratings_score, $value);
-    $value = str_replace("%RATINGS_AVERAGE%", number_format_i18n($post_ratings_average, 2), $value);
-    $value = str_replace("%RATINGS_PERCENTAGE%", number_format_i18n($post_ratings_percentage, 2), $value);
-    $value = str_replace("%RATINGS_USERS%", number_format_i18n($post_ratings_users), $value);
+ 
 
     // Post Template Variables
     $post_link = get_permalink($post_data);
