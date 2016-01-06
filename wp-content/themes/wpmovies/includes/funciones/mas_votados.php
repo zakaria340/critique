@@ -10,7 +10,8 @@ $imdbRating = get_post_meta($post->ID, "imdbRating", $single = true); ?>
 <?php
 $temp = stripslashes(get_option('postratings_template_highestrated'));
 ?>
-<span><?php echo expand_ratings_template($temp, $post, null, 0, false); ?></span> 
+<span><?php
+$post_ratings_average = floatval($post->ratings_average);echo $post_ratings_average; ?></span> 
 <?php if($mostrar = $terms = strip_tags( $terms = get_the_term_list( $post->ID, ''.$year_estreno.'' ))) {  ?><i><?php echo $mostrar; ?></i><?php } ?>
 </li>
 <?php $numerado++; ?>
