@@ -101,3 +101,14 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 .sidebar_right .links ul.lista {
     max-height: 500px;
 }
+
+
+.ratings-post-top {
+    display: block;
+    float: left;
+    margin-left: 34px;
+}
+
+.ratings-post-top .post-ratings-image {
+    width: 14px;
+}
