@@ -1293,7 +1293,7 @@ function mine_expand_ratings_template($template, $post_data, $post_ratings_data 
     // Replace the variables
     $value = $template;
     if (strpos($template, '%RATINGS_IMAGES%') !== false) {
-        $post_ratings_images = get_ratings_images($ratings_custom, $ratings_max, $post_ratings, $ratings_image, $post_ratings_alt_text, $insert_half);
+        $post_ratings_images = '<tag class="ratings-post-top">'.get_ratings_images($ratings_custom, $ratings_max, $post_ratings, $ratings_image, $post_ratings_alt_text, $insert_half).'</tag>';
         $value = str_replace("%RATINGS_IMAGES%", $post_ratings_images, $value);
     }
     if (strpos($template, '%RATINGS_IMAGES_VOTE%') !== false) {
@@ -1317,6 +1317,7 @@ function mine_expand_ratings_template($template, $post_data, $post_ratings_data 
     $value = str_replace("%POST_ID%", $post_id, $value);
     $value = str_replace("%POST_TITLE%", '', $value);
     $value = str_replace("%POST_URL%", '', $value);
+    $value = str_replace("out of", '', $value);
     $value = strip_tags($value, '<img>');
     if (strpos($template, '%POST_EXCERPT%') !== false) {
         if (get_the_ID() != $post_id) {
