@@ -32,7 +32,9 @@
 <script>
 $(function()
 {
-$('.scrolling').jScrollPane();
+$('.scrolling').jScrollPane({
+    height: 500
+});
 });
 </script>
 <?php css_theme(); ?>
