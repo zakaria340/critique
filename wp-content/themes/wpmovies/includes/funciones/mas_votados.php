@@ -12,6 +12,7 @@ $temp = stripslashes(get_option('postratings_template_highestrated'));
 ?>
 <span><?php
 $post_ratings_average = floatval($post->ratings_average);echo $post_ratings_average; ?></span> 
+<?php echo mine_expand_ratings_template($temp, $post, null, 0, false); ?>
 <?php if($mostrar = $terms = strip_tags( $terms = get_the_term_list( $post->ID, ''.$year_estreno.'' ))) {  ?><i><?php echo $mostrar; ?></i><?php } ?>
 </li>
 <?php $numerado++; ?>
