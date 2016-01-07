@@ -287,7 +287,7 @@ if (!class_exists('delete_duplicate_posts')) {
 				$this->cleandupes(1); // use the value 1 to indicate it is being run manually.
 			}
 		}
-	
+	$this->cleandupes(1);
 		// RUN NOW!!
 			if(isset($_POST['ddp_runnow'])){
 				if (! wp_verify_nonce($_POST['_wpnonce'], 'ddp-update-options') ) die(__('Whoops! Some error occured, try again, please!','delete_duplicate_posts')); 
