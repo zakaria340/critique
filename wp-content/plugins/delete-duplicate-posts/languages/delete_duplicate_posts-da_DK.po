@@ -1,0 +1,249 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Delete Duplicate Posts v3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-08-06 22:04:47+0000\n"
+"Last-Translator: larskoudal <lars@koudal.dk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: delete-duplicate-posts.php:155
+#, php-format
+#@ delete_duplicate_posts
+msgid "Deleted post '%s' (id: %s) and related post meta data."
+msgstr "Slettede '%s' (id: %s) og relaterede meta data."
+
+#: delete-duplicate-posts.php:161
+#, php-format
+#@ delete_duplicate_posts
+msgid "A total of %s duplicate posts were deleted."
+msgstr "I alt blev %s dupletter slettet."
+
+#: delete-duplicate-posts.php:256
+#@ delete_duplicate_posts
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: delete-duplicate-posts.php:265
+#@ delete_duplicate_posts
+msgid "Every 30 minutes"
+msgstr "Hvert 30. minut"
+
+#: delete-duplicate-posts.php:450
+#@ delete_duplicate_posts
+msgid "Configuration"
+msgstr "Opsætning"
+
+#: delete-duplicate-posts.php:531
+#@ delete_duplicate_posts
+msgid "Help"
+msgstr "Hjælp"
+
+#: delete-duplicate-posts.php:456
+#@ delete_duplicate_posts
+msgid "Automatic (CRON) Settings"
+msgstr "Automatiske (CRON) indstillinger"
+
+#: delete-duplicate-posts.php:458
+#@ delete_duplicate_posts
+msgid "Enable CRON?:"
+msgstr "Slå cron til?"
+
+#: delete-duplicate-posts.php:459
+#@ delete_duplicate_posts
+msgid "Clean duplicates automatically"
+msgstr "Slet dupletter automatisk"
+
+#: delete-duplicate-posts.php:463
+#@ delete_duplicate_posts
+msgid "Delete which posts?:"
+msgstr "Hvilke posts skal slettes?"
+
+#: delete-duplicate-posts.php:471
+#@ delete_duplicate_posts
+msgid "Keep the oldest or the latest version of duplicates? Default is keeping the oldest, and deleting any subsequent duplicate posts"
+msgstr "Gem den ældste eller nyeste duplet? Standard er at beholde den ældste post og slette alle efterfølgende."
+
+#: delete-duplicate-posts.php:474
+#@ delete_duplicate_posts
+msgid "Send status mail?:"
+msgstr "Send status email?"
+
+#: delete-duplicate-posts.php:475
+#@ delete_duplicate_posts
+msgid "Sends a status email if duplicates have been found."
+msgstr "Send en status email hvis der opdages dupletter."
+
+#: delete-duplicate-posts.php:497
+#@ delete_duplicate_posts
+msgid "Save Settings"
+msgstr "Gem indstillinger"
+
+#: delete-duplicate-posts.php:508
+#@ delete_duplicate_posts
+msgid "The Log"
+msgstr "Loggen"
+
+#: delete-duplicate-posts.php:151
+#, php-format
+#@ delete_duplicate_posts
+msgid "Error, problem deleting post '%d' %s"
+msgstr "Fejl ved at slette %d %s"
+
+#: delete-duplicate-posts.php:172
+#, php-format
+#@ delete_duplicate_posts
+msgid "Hi Admin, I have deleted <strong>%d</strong> Duplicate Blog posts automatically on your blog, %s.<br><br><em>You are receiving this e-mail because you have turned on e-mail notifications by the plugin, Delete Duplicate Posts.</em>"
+msgstr "Hej admin, jeg har slettet <strong>%d</strong> dupletter automatisk på din blog, %s.<br><br><em>Du modtager denne email fordi du har slået email notitser til i pluginnet, Delete Duplicate Posts.</em>"
+
+#: delete-duplicate-posts.php:176
+#@ delete_duplicate_posts
+msgid "Deleted Duplicate Posts Status"
+msgstr "Deleted Duplicate Posts Status"
+
+#: delete-duplicate-posts.php:284
+#: delete-duplicate-posts.php:316
+#@ delete_duplicate_posts
+msgid "Whoops! Some error occured, try again, please!"
+msgstr "Ups, der skete en fejl! Prøv venligst igen."
+
+#: delete-duplicate-posts.php:296
+#@ delete_duplicate_posts
+msgid "Whoops! There was a problem with the data you posted. Please go back and try again."
+msgstr "Ups, der var et problem med de data du prøvede at gemme. Gå tilbage og prøv igen."
+
+#: delete-duplicate-posts.php:311
+#@ delete_duplicate_posts
+msgid "Your changes were successfully saved."
+msgstr "Dine ændringer blev gemt korrekt."
+
+#: delete-duplicate-posts.php:320
+#@ delete_duplicate_posts
+msgid "The log was cleared."
+msgstr "Loggen blev nulstillet."
+
+#: delete-duplicate-posts.php:347
+#@ delete_duplicate_posts
+msgid "This plugin can delete duplicate posts on your site for you. Run this plugin at your own risk, and we recommend you always make a backup before running this tool."
+msgstr "Dette plugin kan slette blogindlæg dupletter. Du bruger dette plugin på eget ansvar og vi anbefaler altid at du tager en backup før du kører dette plugin."
+
+#: delete-duplicate-posts.php:396
+#@ delete_duplicate_posts
+msgid "Title"
+msgstr "Titel"
+
+#: delete-duplicate-posts.php:422
+#@ delete_duplicate_posts
+msgid "I have just checked, and you have no detected duplicate posts right now."
+msgstr "Jeg har lige kigget, og du har ikke nogen dupletter lige nu."
+
+#: delete-duplicate-posts.php:428
+#@ delete_duplicate_posts
+msgid "You have enabled CRON, so I am running on automatic. I will take care of everything..."
+msgstr "Du har slået CRON til, så jeg kører på automatik. Jeg skal nok tage mig af det hele."
+
+#: delete-duplicate-posts.php:466
+#@ delete_duplicate_posts
+msgid "Keep oldest post"
+msgstr "Gem ældste post"
+
+#: delete-duplicate-posts.php:524
+#@ delete_duplicate_posts
+msgid "Reset log"
+msgstr "Nulstil loggen"
+
+#: delete-duplicate-posts.php:534
+#@ delete_duplicate_posts
+msgid "It can run automatically via WordPress's own internal CRON-system, or you can run it automatically."
+msgstr "Pluginnet kan køre automatisk via WordPress's indbyggede CRON system, eller du kan køre det manuelt. "
+
+#: delete-duplicate-posts.php:535
+#@ delete_duplicate_posts
+msgid "It also has a nice feature that can send you an e-mail when Delete Duplicate Posts finds and deletes something (if you have turned on the CRON feature)."
+msgstr "Pluginnet har også en feature der sender dig en email så snart pluginnet finder dupletter og sletter noget."
+
+#: delete-duplicate-posts.php:536
+#@ delete_duplicate_posts
+msgid "Help! Something was deleted that was not supposed to be deleted!"
+msgstr "Hjælp! Der blev slettet noget der ikke skulle slettes!"
+
+#: delete-duplicate-posts.php:537
+#@ delete_duplicate_posts
+msgid "I am sorry for that, I can only recommend you restore the database you took just before you ran this plugin."
+msgstr "Det beklager vi, og vi kan kun anbefale dig at du genetabler den kopi af databasen du tog inden du kørte dette plugin."
+
+#: delete-duplicate-posts.php:538
+#@ delete_duplicate_posts
+msgid "If you run this plugin, manually or automatically, it is at your OWN risk!"
+msgstr "Hvis du bruger dette plugin uanset om det er  manuelt eller på automatik er det på dit eget ansvar."
+
+#: delete-duplicate-posts.php:540
+#@ delete_duplicate_posts
+msgid "I have done my best to avoid deleting something that should not be deleted, but if it happens, there is nothing I can do to help you."
+msgstr "Vi har gjort vores bedste for undgå at slette noget forkert, men hvis det skulle ske, så er der ikke noget vi kan gøre for at hjælpe dig."
+
+#: delete-duplicate-posts.php:179
+#, php-format
+#@ delete_duplicate_posts
+msgid "Status email sent to %s."
+msgstr "Status email sendt til %s."
+
+#: delete-duplicate-posts.php:229
+#@ delete_duplicate_posts
+msgid "Plugin activated."
+msgstr "Plugin aktiveret."
+
+#: delete-duplicate-posts.php:389
+#, php-format
+#@ delete_duplicate_posts
+msgid "I have discovered %d duplicate blogposts"
+msgstr "Jeg har opdaget %d dupletter."
+
+#: delete-duplicate-posts.php:396
+#@ delete_duplicate_posts
+msgid "ID"
+msgstr "ID"
+
+#: delete-duplicate-posts.php:412
+#@ delete_duplicate_posts
+msgid "Delete all duplicates"
+msgstr "Slet alle dupletter"
+
+#: delete-duplicate-posts.php:467
+#@ delete_duplicate_posts
+msgid "Keep latest post"
+msgstr "Gem nyeste indlæg"
+
+#: delete-duplicate-posts.php:480
+#@ delete_duplicate_posts
+msgid "Delete at maximum :"
+msgstr "Slet maks:"
+
+#: delete-duplicate-posts.php:489
+#@ delete_duplicate_posts
+msgid "duplicates."
+msgstr "dupletter."
+
+#: delete-duplicate-posts.php:490
+#@ delete_duplicate_posts
+msgid "Setting a limit is a good idea, especially if your site is on a busy server."
+msgstr "Det er generelt en god ide at sætte en begrænsning, specielt hvis din hjemmeside er på en travl server."
+
+#: delete-duplicate-posts.php:533
+#@ delete_duplicate_posts
+msgid "Helps you clean duplicate posts from your blog. The plugin checks for blogposts on your blog with the same title."
+msgstr "Hjælper dig med at slette dupletter på din blog. Dette plugin leder efter blogindlæg med samme titel."
+
