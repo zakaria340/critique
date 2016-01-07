@@ -8,7 +8,7 @@ foreach ($html->find('#actu a.liendetail') as $element) {
 
     $i++;
 
-    if ($i > 400) {
+    if ($i > 700) {
         $href = str_replace('&amp;', '&', $element->href);
         $urlMovie = 'http://www.africultures.com/php/' . $href;
         $director = utf8_encode($element->find('.cartoucheh1', 0)->innertext);
