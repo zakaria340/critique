@@ -282,11 +282,11 @@ get_header();
                     $post_ratings_average = is_array($post_ratings_data) && array_key_exists('ratings_average', $post_ratings_data) ? floatval($post_ratings_data['ratings_average'][0]) : 0;
 
                     if (has_post_thumbnail()) {
-                        $imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'home');
+                        $imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'original');
                         $imgsrc = $imgsrc[0];
                     } elseif ($postimages = get_children("post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=0")) {
                         foreach ($postimages as $postimage) {
-                            $imgsrc = wp_get_attachment_image_src($postimage->ID, 'home');
+                            $imgsrc = wp_get_attachment_image_src($postimage->ID, 'original');
                             $imgsrc = $imgsrc[0];
                         }
                     } elseif (preg_match('/<img [^>]*src=["|\']([^"|\']+)/i', get_the_content(), $match) != FALSE) {
