@@ -5,91 +5,95 @@ $html = file_get_html('http://www.africultures.com/php/index.php?nav=rubrique&no
 // remove all image
 $i = 0;
 foreach ($html->find('#actu a.liendetail') as $element) {
+
     $i++;
-    $href = str_replace('&amp;', '&', $element->href);
-    $urlMovie = 'http://www.africultures.com/php/' . $href;
-    $director = utf8_encode($element->find('.cartoucheh1', 0)->innertext);
-    $title = trim(strip_tags(utf8_encode($element->find('.cartoucheh2', 0)->innertext)));
-if (empty(wp_exist_post_by_title(wp_specialchars($data['titre'])))) {
-    
 
-    $htmlMovie = file_get_html($urlMovie);
-    $img = $syn = $anne = $trailer = $cast = '';
-    if ($htmlMovie->find('.agrandissement img', 0)) {
-        $img = $htmlMovie->find('.agrandissement img', 0)->src;
-    }
+    if ($i > 400) {
+        $href = str_replace('&amp;', '&', $element->href);
+        $urlMovie = 'http://www.africultures.com/php/' . $href;
+        $director = utf8_encode($element->find('.cartoucheh1', 0)->innertext);
+        $title = trim(strip_tags(utf8_encode($element->find('.cartoucheh2', 0)->innertext)));
+        if (empty(wp_exist_post_by_title(wp_specialchars($data['titre'])))) {
 
-    if ($htmlMovie->find('#actu .cartouchep', 0)) {
-        $syn = $htmlMovie->find('#actu .cartouchep', 0)->innertext;
-        $syn = strip_tags($syn, '<br>');
-        $syn = utf8_encode($syn);
-    }
-    if ($htmlMovie->find('#actu .titre1', 0)) {
-        $anne = $htmlMovie->find('#actu .titre1', 0)->innertext;
-        $anne = explode('|', $anne);
-        $anne = trim(end($anne));
-    }
-    if ($htmlMovie->find('#actu .cartouchep', 0)) {
-        $trailer = $htmlMovie->find('#actu .cartouchep', 0)->innertext;
-        $trailer = strip_tags($trailer, '<embed>');
-        preg_match_all('/<embed (.*?)>/', $trailer, $matches);
-        $trailer = $matches[0];
-        if (!empty($trailer)) {
-            $trailer = $trailer[0];
+
+            $htmlMovie = file_get_html($urlMovie);
+            $img = $syn = $anne = $trailer = $cast = '';
+            if ($htmlMovie->find('.agrandissement img', 0)) {
+                $img = $htmlMovie->find('.agrandissement img', 0)->src;
+            }
+
+            if ($htmlMovie->find('#actu .cartouchep', 0)) {
+                $syn = $htmlMovie->find('#actu .cartouchep', 0)->innertext;
+                $syn = strip_tags($syn, '<br>');
+                $syn = utf8_encode($syn);
+            }
+            if ($htmlMovie->find('#actu .titre1', 0)) {
+                $anne = $htmlMovie->find('#actu .titre1', 0)->innertext;
+                $anne = explode('|', $anne);
+                $anne = trim(end($anne));
+            }
+            if ($htmlMovie->find('#actu .cartouchep', 0)) {
+                $trailer = $htmlMovie->find('#actu .cartouchep', 0)->innertext;
+                $trailer = strip_tags($trailer, '<embed>');
+                preg_match_all('/<embed (.*?)>/', $trailer, $matches);
+                $trailer = $matches[0];
+                if (!empty($trailer)) {
+                    $trailer = $trailer[0];
+                }
+            }
+
+            if ($htmlMovie->find('#actu .cartouchep', 0)) {
+                $cast = $htmlMovie->find('#actu table', 0)->innertext;
+                $cast = strip_tags($cast);
+                preg_match_all('/Avec :(.*?):/', $cast, $matches);
+                $cast = $matches[1];
+                if (!empty($cast)) {
+                    $cast = $cast[0];
+                }
+                $cast = str_replace('Production', '', $cast);
+                $cast = trim($cast);
+                $cast = explode(',', $cast);
+            }
+            if ($htmlMovie->find('#actu .cartouchep', 0)) {
+                $genre = $htmlMovie->find('#actu table', 0)->innertext;
+                $genre = strip_tags($genre);
+                preg_match_all('/Genre :(.*?):/', $genre, $matches);
+                $genre = $matches[1];
+                if (!empty($genre)) {
+                    $genre = $genre[0];
+                }
+                $genre = str_replace('Type', '', $genre);
+                $genre = ucfirst(trim($genre));
+            }
+
+            if (is_array($trailer)) {
+                $trailer = '';
+            }
+            if (is_array($img)) {
+                $img = '';
+            }
+            $filmInfo = array(
+                'titre' => $title,
+                'image' => $img,
+                'real' => $director,
+                'cast' => $cast,
+                'genre' => $genre,
+                'annee' => trim($anne),
+                'duree' => '1h38min',
+                'synopsis' => $syn,
+                'trailer' => $trailer,
+            );
+            saveMovie($filmInfo);
         }
-    }
-
-    if ($htmlMovie->find('#actu .cartouchep', 0)) {
-        $cast = $htmlMovie->find('#actu table', 0)->innertext;
-        $cast = strip_tags($cast);
-        preg_match_all('/Avec :(.*?):/', $cast, $matches);
-        $cast = $matches[1];
-        if (!empty($cast)) {
-            $cast = $cast[0];
-        }
-        $cast = str_replace('Production', '', $cast);
-        $cast = trim($cast);
-        $cast = explode(',', $cast);
-    }
-    if ($htmlMovie->find('#actu .cartouchep', 0)) {
-        $genre = $htmlMovie->find('#actu table', 0)->innertext;
-        $genre = strip_tags($genre);
-        preg_match_all('/Genre :(.*?):/', $genre, $matches);
-        $genre = $matches[1];
-        if (!empty($genre)) {
-            $genre = $genre[0];
-        }
-        $genre = str_replace('Type', '', $genre);
-        $genre = ucfirst(trim($genre));
-    }
-
-    if (is_array($trailer)) {
-        $trailer = '';
-    }
-    if (is_array($img)) {
-        $img = '';
-    }
-    $filmInfo = array(
-      'titre' => $title,
-      'image' => $img,
-      'real' => $director,
-      'cast' => $cast,
-      'genre' => $genre,
-      'annee' => trim($anne),
-      'duree' => '1h38min',
-      'synopsis' => $syn,
-      'trailer' => $trailer,
-    );
-    saveMovie($filmInfo);
     }
 }
 
 function saveMovie($data) {
     $my_post = array(
-      'post_title' => wp_specialchars($data['titre']),
-      'post_content' => $data['synopsis'],
-      'post_status' => 'publish',
-      'post_author' => 1,
+        'post_title' => wp_specialchars($data['titre']),
+        'post_content' => $data['synopsis'],
+        'post_status' => 'publish',
+        'post_author' => 1,
     );
 
     if (empty(wp_exist_post_by_title(wp_specialchars($data['titre'])))) {
