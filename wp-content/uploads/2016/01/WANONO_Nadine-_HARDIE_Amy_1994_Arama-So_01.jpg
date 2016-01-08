@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Page introuvable :(</title>
+	<link rel="stylesheet" type="text/css" href="./04_css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./04_css/style.css">
+	<style>
+		html { padding: 30px 10px; font-size: 20px; line-height: 1.4; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+		.cont { max-width: 500px; _width: 500px; padding: 20px 20px 40px; border: 1px solid #b3b3b3; border-radius: 4px; margin: 0 auto; box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff; background: #fcfcfc; }
+		h1 { margin: 0 10px; font-size: 50px; text-align: center; }
+		h1 span { color: #bbb; }
+		h3 { margin: 1.5em 0 0.5em; }
+		p { margin: 1em 0; }
+		ul { padding: 0 0 0 40px; margin: 1em 0; }
+		.container { max-width: 380px; _width: 380px; margin: 0 auto; }
+	</style>
+	<script type="text/javascript">
+		function changer_langue(lng)
+		{
+			if(lng=="en")
+			{
+				document.getElementById('txt_en').style.display = "block";
+				document.getElementById('txt_fr').style.display = "none";
+				document.getElementById('txt_es').style.display = "none";
+				document.getElementById('txt_pt').style.display = "none";
+			}
+			else
+			{
+				if(lng=="fr")
+				{
+					document.getElementById('txt_en').style.display = "none";
+					document.getElementById('txt_fr').style.display = "block";
+					document.getElementById('txt_es').style.display = "none";
+					document.getElementById('txt_pt').style.display = "none";
+				}
+				else
+				{
+					if(lng=="pt")
+					{
+						document.getElementById('txt_en').style.display = "none";
+						document.getElementById('txt_fr').style.display = "none";
+						document.getElementById('txt_es').style.display = "none";
+						document.getElementById('txt_pt').style.display = "block";
+					}
+					else
+					{
+						document.getElementById('txt_en').style.display = "none";
+						document.getElementById('txt_fr').style.display = "none";
+						document.getElementById('txt_es').style.display = "block";
+						document.getElementById('txt_pt').style.display = "none";
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="txt_en" style="display:block">	
+		<div class="cont">
+			<div class="container">
+				<div id="colorbox">
+					<div style="float:right">
+						<table border="0">
+							<tr>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/gb.gif" onClick="changer_langue('en')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/fr.gif" onClick="changer_langue('fr')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/pt.gif" onClick="changer_langue('pt')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/es.gif" onClick="changer_langue('es')" style="cursor:pointer"></td>
+							</tr>
+						</table>
+					</div>
+					<div style="clear:right">
+						<br />
+					</div>
+					<h2>Error 404 <br/><br/>Page not found <span>:(</span></h2>
+				</div>
+					<p>Sorry, but the page you are trying to view does not exist.</p>
+					<p>This may be due to :</p>
+					<ul>
+						<li>address incorrectly entered</li>
+						<li>an invalid link</li>
+					</ul>
+					<p><a href="http://www.spla.pro" title="Home SPLA">You can access the home page</a></p>
+			</div>
+		</div>
+	</div>
+	<div id="txt_fr" style="display:none">	
+		<div class="cont">
+			<div class="container">
+				<div id="colorbox">
+					<div style="float:right">
+						<table border="0">
+							<tr>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/gb.gif" onClick="changer_langue('en')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/fr.gif" onClick="changer_langue('fr')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/pt.gif" onClick="changer_langue('pt')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/es.gif" onClick="changer_langue('es')" style="cursor:pointer"></td>
+							</tr>
+						</table>
+					</div>
+					<div style="clear:right">
+						<br />
+					</div>
+					<h2>Erreur 404 <br/><br/>Page non trouvée <span>:(</span></h2>
+				</div>
+					<p>Désolé, mais la page que vous tentez de voir n'existe pas.</p>
+					<p>Ce peut être lié à :</p>
+					<ul>
+						<li>une adresse incorrectement saisie</li>
+						<li>un lien non valide</li>
+					</ul>
+					<p><a href="http://www.spla.pro" title="Accueil SPLA">Vous pouvez accéder à la page d'accueil</a></p>
+			</div>
+		</div>
+	</div>
+	<div id="txt_pt" style="display:none">	
+		<div class="cont">
+			<div class="container">
+				<div id="colorbox">
+					<div style="float:right">
+						<table border="0">
+							<tr>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/gb.gif" onClick="changer_langue('en')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/fr.gif" onClick="changer_langue('fr')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/pt.gif" onClick="changer_langue('pt')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/es.gif" onClick="changer_langue('es')" style="cursor:pointer"></td>
+							</tr>
+						</table>
+					</div>
+					<div style="clear:right">
+						<br />
+					</div>
+					<h2>erro 404 <br/><br/>Página não encontrada <span>:(</span></h2>
+				</div>
+					<p>Desculpe, mas a página que você está tentando ver não existe.</p>
+					<p>Isto pode ser devido a :</p>
+					<ul>
+						<li>tratar incorretamente</li>
+						<li>um link inválido</li>
+					</ul>
+					<p><a href="http://www.spla.pro" title="Início SPLA">Você pode acessar a página inicial</a></p>
+			</div>
+		</div>
+	</div>
+	<div id="txt_es" style="display:none">	
+		<div class="cont">
+			<div class="container">
+				<div id="colorbox">
+				<div style="float:right">
+						<table border="0">
+							<tr>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/gb.gif" onClick="changer_langue('en')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/fr.gif" onClick="changer_langue('fr')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/pt.gif" onClick="changer_langue('pt')" style="cursor:pointer"></td>
+								<td>&nbsp;</td>
+								<td><img src="http://www.sudplanete.net/images/drapeaux/es.gif" onClick="changer_langue('es')" style="cursor:pointer"></td>
+							</tr>
+						</table>
+					</div>
+					<div style="clear:right">
+						<br />
+					</div>
+					<h2>Error 404 <br/><br/>Página no encontrada <span>:(</span></h2>
+				</div>
+					<p>Lo sentimos, pero la página que está intentando ver no existe.</p>
+					<p>Esto puede ser debido a :</p>
+					<ul>
+						<li>abordar introducido incorrectamente</li>
+						<li>un enlace no válido</li>
+					</ul>
+					<p><a href="http://www.spla.pro" title="Inicio SPLA">Puede acceder a la página de inicio</a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

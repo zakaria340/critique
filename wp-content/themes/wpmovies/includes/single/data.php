@@ -1,5 +1,4 @@
 <?php
-
 function get_the_term_list_mine( $id, $taxonomy, $before = '', $sep = '', $after = '') {
     $terms = get_the_terms( $id, $taxonomy );
 
@@ -70,7 +69,8 @@ $imgsrc = $img[0];
 <div id="dato-1" class="data-content">
 <p>
 <?php if($values = get_post_custom_values("Rated")) { ?><span class="<?php echo $values[0]; ?>"><?php echo $values[0]; ?></span><?php } ?>
-<?php if($mostrar = $terms = strip_tags( $terms = get_the_term_list( $post->ID, ''.$year_estreno.'' ))) {  ?><span>
+<?php
+if($mostrar = $terms = strip_tags( $terms = get_the_term_list( $post->ID, ''.$year_estreno.'' ))) {  ?><span>
 <?php echo get_the_term_list($post->ID, ''.$year_estreno.'', '', '', ''); ?> 
 </span><?php } ?>
 <?php if($values = get_post_custom_values("Runtime")) { ?><span><b class="icon-query-builder"></b> <?php echo $values[0]; ?></span><?php } ?>  
