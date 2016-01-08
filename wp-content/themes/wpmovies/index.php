@@ -295,6 +295,10 @@ get_header();
                         $img = get_post_custom_values("poster_url");
                         $imgsrc = $img[0];
                     }
+                    
+                    if($imgsrc == ''){
+                        $imgsrc = 'http://placehold.it/170';
+                    }
                     ?>
                     <div class="movie">
                         <div class="imagen">
