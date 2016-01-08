@@ -293,11 +293,12 @@ get_header();
                         $imgsrc = $match[1];
                     } else {
                         $img = get_post_custom_values("poster_url");
-                        $imgsrc = $img[0];
-                    }
-                    
-                    if($imgsrc == ''){
-                        $imgsrc = 'http://placehold.it/170';
+                        if(trim($img) == ''){
+                             $imgsrc = 'http://placehold.it/170';
+                        }else{
+                           $imgsrc = $img[0]; 
+                        }
+                        
                     }
                     ?>
                     <div class="movie">
