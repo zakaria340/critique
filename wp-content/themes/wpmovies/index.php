@@ -223,8 +223,8 @@ get_header();
         </div>
 
         <?php
-        function_exists('wp_nav_menu') && has_nav_menu('menu1');
-        wp_nav_menu(array('theme_location' => 'menu1', 'container' => '', 'menu_class' => 'home_links'));
+       // function_exists('wp_nav_menu') && has_nav_menu('menu1');
+        //wp_nav_menu(array('theme_location' => 'menu1', 'container' => '', 'menu_class' => 'home_links'));
         ?>
         <div class="header_slider">
             <span class="titulo_2">
