@@ -1,4 +1,5 @@
 <?php
+
 //include(ABSPATH . 'simple_html_dom.php');
 //// get DOM from URL or file
 //$html = file_get_html('http://www.africultures.com/php/index.php?nav=rubrique&no_pays=135&sr=2&recherche=films&lettres=TOUS');
@@ -90,10 +91,10 @@
 
 function saveMovie($data) {
     $my_post = array(
-        'post_title' => wp_specialchars($data['titre']),
-        'post_content' => $data['synopsis'],
-        'post_status' => 'publish',
-        'post_author' => 1,
+      'post_title' => wp_specialchars($data['titre']),
+      'post_content' => $data['synopsis'],
+      'post_status' => 'publish',
+      'post_author' => 1,
     );
 
     if (empty(wp_exist_post_by_title(wp_specialchars($data['titre'])))) {
@@ -182,7 +183,7 @@ get_header();
 <?php include_once 'sidebar_left.php'; ?>
 <div class="items">
     <div id="directorio">
-        <?php include_once 'includes/aviso.php'; ?>
+<?php include_once 'includes/aviso.php'; ?>
         <div class="it_header">
             <h1><?php
                 if ($tex = get_option('text-9')) {
@@ -192,7 +193,7 @@ get_header();
                 }
                 ?></h1>
             <div class="buscador">
-                <?php echo buscador_form(); ?>
+<?php echo buscador_form(); ?>
             </div>
         </div>
 
@@ -223,7 +224,7 @@ get_header();
         </div>
 
         <?php
-       // function_exists('wp_nav_menu') && has_nav_menu('menu1');
+        // function_exists('wp_nav_menu') && has_nav_menu('menu1');
         //wp_nav_menu(array('theme_location' => 'menu1', 'container' => '', 'menu_class' => 'home_links'));
         ?>
         <div class="header_slider">
@@ -247,7 +248,7 @@ get_header();
                         _e('Recommended movies', 'mundothemes');
                     }
                     ?> 
-                <?php } ?>
+<?php } ?>
             </span>
             <div class="customNavigation">
                 <a class="btn prev"><b class="icon-chevron-left2"></b></a>
@@ -274,7 +275,27 @@ get_header();
                 ?></span>
         </div>
         <div id="box_movies">
-            <?php if (have_posts()) : ?>
+            <?php
+            add_filter('posts_groupby', 'geotag_search_groupby');
+
+            function geotag_search_groupby($groupby) {
+                global $wpdb;
+                // we need to group on post ID
+                $mygroupby = "{$wpdb->posts}.ID";
+                if (preg_match("/$mygroupby/", $groupby)) {
+                    // grouping we need is already there
+                    return $groupby;
+                }
+                if (!strlen(trim($groupby))) {
+                    // groupby was empty, use ours
+                    return $mygroupby;
+                }
+                // wasn't empty, append ours
+                return $groupby . ", " . $mygroupby;
+            }
+
+            if (have_posts()) :
+                ?>
                 <?php
                 while (have_posts()) : the_post();
 
@@ -293,28 +314,27 @@ get_header();
                         $imgsrc = $match[1];
                     } else {
                         $img = get_post_custom_values("poster_url");
-                        if(trim($img) == ''){
-                             $imgsrc = '';
-                        }else{
-                           $imgsrc = $img[0]; 
+                        if (trim($img) == '') {
+                            $imgsrc = '';
+                        } else {
+                            $imgsrc = $img[0];
                         }
-                        
                     }
                     ?>
-            <?php if($imgsrc != ''): ?>
-                    <div class="movie">
-                        <div class="imagen">
-                            <img src="<?php
-                            echo $imgsrc;
-                            $imgsrc = '';
-                            ?>" alt="<?php the_title(); ?>" width="100%" height="100%" />
-                            <a href="<?php the_permalink() ?>"><span class="player"></span></a>
-                            <div class="imdb"><span class="icon-grade"></span> <?php echo $post_ratings_average; ?></div>
+                    <?php if ($imgsrc != ''): ?>
+                        <div class="movie">
+                            <div class="imagen">
+                                <img src="<?php
+                                echo $imgsrc;
+                                $imgsrc = '';
+                                ?>" alt="<?php the_title(); ?>" width="100%" height="100%" />
+                                <a href="<?php the_permalink() ?>"><span class="player"></span></a>
+                                <div class="imdb"><span class="icon-grade"></span> <?php echo $post_ratings_average; ?></div>
+                            </div>
+                            <h2><?php the_title(); ?></h2>
+                            <?php if ($mostrar = $terms = strip_tags($terms = get_the_term_list($post->ID, '' . $year_estreno . ''))) { ?><span class="year"><?php echo $mostrar; ?></span><?php } ?>
                         </div>
-                        <h2><?php the_title(); ?></h2>
-                        <?php if ($mostrar = $terms = strip_tags($terms = get_the_term_list($post->ID, '' . $year_estreno . ''))) { ?><span class="year"><?php echo $mostrar; ?></span><?php } ?>
-                    </div>
-            <?php endif; ?>
+                    <?php endif; ?>
                     <?php
                 endwhile;
             else :
