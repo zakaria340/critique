@@ -294,13 +294,14 @@ get_header();
                     } else {
                         $img = get_post_custom_values("poster_url");
                         if(trim($img) == ''){
-                             $imgsrc = 'http://placehold.it/170';
+                             $imgsrc = '';
                         }else{
                            $imgsrc = $img[0]; 
                         }
                         
                     }
                     ?>
+            <?php if($imgsrc != ''): ?>
                     <div class="movie">
                         <div class="imagen">
                             <img src="<?php
@@ -313,6 +314,7 @@ get_header();
                         <h2><?php the_title(); ?></h2>
                         <?php if ($mostrar = $terms = strip_tags($terms = get_the_term_list($post->ID, '' . $year_estreno . ''))) { ?><span class="year"><?php echo $mostrar; ?></span><?php } ?>
                     </div>
+            <?php endif; ?>
                     <?php
                 endwhile;
             else :
