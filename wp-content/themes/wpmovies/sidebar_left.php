@@ -12,7 +12,10 @@
 </div>
 <?php } ?>
 <?php echo buscador_form_home(); ?>
-<div class="data">
+ <?php the_widget( 'wp_sidebarlogin'); ?> 
+ <?php the_widget( 'sidebarlogin'); ?> 
+    
+    <div class="data">
 <h3><?php if($tex = get_option('text-1')) { echo $tex; } else { _e('Main','mundothemes'); } ?><span class="icon-caret-down"></span></h3>
 <?php function_exists('wp_nav_menu') && has_nav_menu('menusidebar' ); wp_nav_menu( array( 'theme_location' => 'menusidebar', 'container' => '',  'menu_class' => 'leftmenu') ); ?>
 <br>
