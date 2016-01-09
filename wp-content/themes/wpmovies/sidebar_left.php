@@ -12,7 +12,7 @@
 </div>
 <?php } ?>
 <?php echo buscador_form_home(); ?>
- <?php print the_widget( 'sidebar_login_widget'); ?> 
+ <?php print the_widget( 'sidebar-login'); ?> 
     
 <div class="data hhhhhhhhhhhhh">
 <h3><?php if($tex = get_option('text-1')) { echo $tex; } else { _e('Main','mundothemes'); } ?><span class="icon-caret-down"></span></h3>
