@@ -14,7 +14,7 @@
 <?php echo buscador_form_home(); ?>
  <?php the_widget( 'sidebar_login_widget'); ?> 
     
-<div class="data">
+<div class="data hhhhhhhhhhhhh">
 <h3><?php if($tex = get_option('text-1')) { echo $tex; } else { _e('Main','mundothemes'); } ?><span class="icon-caret-down"></span></h3>
 <?php function_exists('wp_nav_menu') && has_nav_menu('menusidebar' ); wp_nav_menu( array( 'theme_location' => 'menusidebar', 'container' => '',  'menu_class' => 'leftmenu') ); ?>
 <br>
