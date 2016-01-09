@@ -34,9 +34,6 @@ if (current_user_can('update_core')) { ?>
 <div class="menu-admin">
 <ul>
 <?php edit_post_link( __( 'Edit post', 'mundothemes' ), '<li><b>', '</b></li>' ); ?>
-<li><a href="<?php bloginfo('url'); ?>/wp-admin/admin.php?page=wpmovies"><?php _e( 'Theme Settings','mundothemes' ); ?></a></li>
-<li><a href="<?php bloginfo('url'); ?>/wp-admin/admin.php?page=mundothemes"><?php _e( 'License Status','mundothemes' ); ?></a></li>
-<li class="right"><a href="https://mundothemes.com/forums/" target="_blank" class="right"><?php _e( 'Support Forums','mundothemes' ); ?></a></li>
 </ul>
 </div> 
 <?php } ?>
