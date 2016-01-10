@@ -11,13 +11,25 @@
         global $current_user;
         get_currentuserinfo();    
         if(is_user_logged_in()):
+            
                   echo 'Bonjour : ' . $current_user->user_login . "\n";
                     echo get_avatar( $current_user->ID, 64 );
                  ?>
                     <a href="<?php echo wp_logout_url( home_url() ); ?>">Déconnexion</a>
+                    <div class="user-info-message">
+                        <div class="ads-300">Bienvenu au 1ere site de la critique du cinéma marocaine, 
+                    Aidez nous en notant les films et partagez vos notes avec vos amis.
+                    </div>
+                    <ul class="">
+                        <li class="">Découvrez la cinéma marocaine.</li>
+                        <li class="">Notez les films que vous avez déja vues.</li>
+                        <li class="">Partagez les films que vous avez aimé avec vos amis..</li>
+                    </ul>
+                    </div>
                     <?php
         endif;
  ?>
+                    
  </div>
 
 
