@@ -6,8 +6,8 @@
 <?php } else { echo "<br>"; }?>
 
  <div class="links">
-     <?php print the_widget( 'Sidebar_Login_Widget'); ?> 
-</div>
+ <?php do_action( 'wordpress_social_login' ); ?> 
+ </div>
 
 
 <?php include_once 'includes/funciones/mas_votados.php'; # top mas votados ?>
