@@ -148,6 +148,7 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 .user-info-message {
     font-family: Quicksand;
     font-size: 12px;
+    border-bottom: 2px solid #e5e5e5;
 }
 .user-info-message li {
     list-style-type: square;
