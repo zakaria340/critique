@@ -11,6 +11,10 @@
 <?php include_once 'includes/funciones/mas_votados.php'; # top mas votados ?>
 <?php include_once 'includes/funciones/mas_vistos.php'; # top mas vistos ?>
 
+    <div class="links">
+     <?php print the_widget( 'Sidebar_Login_Widget'); ?> 
+</div>
+    
 <div class="links">
 <h3><?php if($tex = get_option('text-48')) { echo $tex; } else { _e('Release Year','mundothemes'); } ?> <span class="icon-sort"></span></h3>
 <ul class="scrolling years">
