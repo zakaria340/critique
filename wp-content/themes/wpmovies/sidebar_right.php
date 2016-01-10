@@ -10,7 +10,7 @@
       <?php
         global $current_user;
         get_currentuserinfo();    
-        if($current_user):
+        if(is_user_logged_in()):
                   echo 'Bonjour : ' . $current_user->user_login . "\n";
                     echo get_avatar( $current_user->ID, 64 );
                  ?>
