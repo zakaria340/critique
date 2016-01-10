@@ -7,6 +7,14 @@
 
  <div class="links">
  <?php do_action( 'wordpress_social_login' ); ?> 
+      <?php
+        global $current_user;
+        get_currentuserinfo();    
+        if($current_user){
+                  echo 'Bonjour : ' . $current_user->user_login . "\n";
+                    echo get_avatar( $current_user->ID, 64 );
+        }
+ ?>
  </div>
 
 
