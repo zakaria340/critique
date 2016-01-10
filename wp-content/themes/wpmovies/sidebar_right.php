@@ -21,8 +21,8 @@
 <?php
 $cc = date('Y');
 $cd = date('Y')-50; 
-foreach (range($cc, $cd) as $n�mero) { ?>
-<li><a class="ito" HREF="<?php bloginfo('url'); ?>/<?php echo $year_estreno; ?>/<?php echo $n�mero; ?>"><?php echo $n�mero; ?></a></li>
+foreach (range($cc, $cd) as $numero) { ?>
+<li><a class="ito" HREF="<?php bloginfo('url'); ?>/<?php echo $year_estreno; ?>/<?php echo $numero; ?>"><?php echo $numero; ?></a></li>
 <?php } ?>
 </ul>
 </div>
