@@ -10,10 +10,13 @@
       <?php
         global $current_user;
         get_currentuserinfo();    
-        if($current_user){
+        if($current_user):
                   echo 'Bonjour : ' . $current_user->user_login . "\n";
                     echo get_avatar( $current_user->ID, 64 );
-        }
+                 ?>
+                    <a href="<?php echo wp_logout_url( home_url() ); ?>">Déconnexion</a>
+                    <?php
+        endif;
  ?>
  </div>
 
