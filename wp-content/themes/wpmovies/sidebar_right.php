@@ -19,8 +19,7 @@
                  ?>
                     <a href="<?php echo wp_logout_url( home_url() ); ?>">Déconnexion</a>
                    
-                        <div class="">Bienvenu au 1ere site de la critique du cinéma marocaine, 
-                    Aidez nous en notant les films et partagez vos notes avec vos amis.
+                        <div class="titreinfomessage">Bienvenu au 1ere site de la critique du cinéma marocaine.
                     </div>
                     <ul class="">
                         <li class="">Découvrez la cinéma marocaine.</li>
