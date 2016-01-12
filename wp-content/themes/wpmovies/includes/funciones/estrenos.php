@@ -12,8 +12,14 @@ $imgsrc = $imgsrc[0];
 $imgsrc = $match[1];
 } else {
 $img = get_post_custom_values("poster_url");
-$imgsrc = $img[0];
+ if (trim($img) == '') {
+                $imgsrc = '';
+            } else {
+                $imgsrc = $img[0];
+            }
 } ?>
+        <?php if ($imgsrc != ''): ?>
+
 <div class="item">
   <a href="<?php the_permalink() ?>">
   <div class="imgss">
@@ -27,5 +33,6 @@ $imgsrc = $img[0];
  <span class="ttps"><?php the_title(); ?></span>
  <?php if($mostrar = $terms = strip_tags( $terms = get_the_term_list( $post->ID, ''.$year_estreno.'' ))) {  ?><span class="ytps"><?php echo $mostrar; ?></span><?php } ?>
 </div>
+     <?php endif; ?>
 <?php endforeach; ?>
 </div>
