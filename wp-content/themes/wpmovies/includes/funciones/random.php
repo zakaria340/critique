@@ -1,4 +1,4 @@
-<div id="owl-demo2" class="owl-carousel owl-theme">
+<div id="owl-demo2" class="owl-carousel owl-theme eeeeeeeeeeeeeee">
     <?php $rand_posts = get_posts('numberposts=20&orderby=rand');
     foreach ($rand_posts as $post) : ?>
         <?php
