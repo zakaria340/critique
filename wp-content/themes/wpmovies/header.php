@@ -9,8 +9,7 @@
   <?php } ?>
   <base href="<?php bloginfo('url'); ?>"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://semantic-ui.com/dist/semantic.min.css"/>
-
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/semantic/tab.css"/>
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/reset.css"/>
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/mt.min.css"/>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
@@ -26,6 +25,8 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/paginador.js" type="text/javascript"></script>
   <?php } ?>
   <script src="<?php echo get_template_directory_uri(); ?>/js/js.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/semantic/tab.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/semantic/index.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <?php wp_head(); ?>
   <?php $gwebmasters = get_option('analitica'); if (!empty($gwebmasters)) echo stripslashes(get_option('analitica')); ?>
