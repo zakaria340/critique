@@ -9,10 +9,10 @@
   <?php } ?>
   <base href="<?php bloginfo('url'); ?>"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://semantic-ui.com/dist/semantic.min.css"/>
 
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/reset.css"/>
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/mt.min.css"/>
-  <link rel="stylesheet" type="text/css" href="http://semantic-ui.com/dist/semantic.min.css"/>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
