@@ -5,7 +5,7 @@ $imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'home');
 $imgsrc = $imgsrc[0];
 } elseif ($postimages = get_children("post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=0")) {
 foreach($postimages as $postimage) {
-$imgsrc = wp_get_attachment_image_src($postimage->ID, 'home');
+$imgsrc = wp_get_attachment_image_src($postimage->ID, 'original');
 $imgsrc = $imgsrc[0];
 }
 } elseif (preg_match('/<img [^>]*src=["|\']([^"|\']+)/i', get_the_content(), $match) != FALSE) {
