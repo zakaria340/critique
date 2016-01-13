@@ -9,7 +9,7 @@
 //
 //    $i++;
 //
-//    if ($i > 700) {
+//    if ($i > 900) {
 //        $href = str_replace('&amp;', '&', $element->href);
 //        $urlMovie = 'http://www.africultures.com/php/' . $href;
 //        $director = utf8_encode($element->find('.cartoucheh1', 0)->innertext);
@@ -182,8 +182,61 @@ get_header();
 <?php include_once 'includes/header.php'; ?>
 <?php include_once 'sidebar_left.php'; ?>
 <div class="items">
+    <div style="clear: both"></div>
+    <div class="hint-hero">
+        <div class="d-grid">
+            <div class="hint-hero-title">Critique.ma - Critiques Cinéma</div>
+            <span class="d-grid hint-hero-subtitle">Découvrez, notez et partagez avec vos amis</span>
+
+            <a class="hint-facebookButton d-facebookButton" href="/oauthapi/facebook?version=2&amp;block=elementHero">
+                <span class="hint-startNowBig"></span>
+            </a>
+        </div>
+
+        <div class="hint-popular-products">
+            <a style="left: 720px" class="hint-popular-product" href="http://www.critique.ma/director/hicham-lasri/">
+                <img width="120" height="163" title="Les films Hicham Lasri réalisateur" alt="Les films Hicham Lasri réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/hicham-lasri1.jpg">
+            </a>
+            <a style="left: 840px" class="hint-popular-product" href="http://www.critique.ma/director/abdeslam-kelai/">
+                <img width="120" height="163" title="Les films de Abdeslma Kelai réalisateur" alt="Les films de Abdeslma Kelai réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/Abdeslma-Kelai.jpg">
+            </a>
+            <a style="left: 960px" class="hint-popular-product" href="http://www.critique.ma/director/mohamed-zineddaine/">
+                <img width="120" height="163" title="Les films Mohamed Zineddaine réalisateur" alt="Les films Mohamed Zineddaine réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/Mohamed-Zineddaine.jpg">
+            </a>
+            <a style="left: 1080px" class="hint-popular-product" href="http://www.critique.ma/director/mohamed-mouftakir/">
+                <img width="120" height="160" title="Les films Mohamed Mouftakir réalisateur" alt="Les films Mohamed Mouftakir réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/Mohamed-Mouftakir.jpg">
+            </a>
+            <a style="left: 1200px" class="hint-popular-product" href="http://www.critique.ma/director/mohamed-abderrahman-tazi/">
+                <img width="120" height="163" title="Les films Mohamed abderrahman tazi réalisateur" alt="Les films Mohamed abderrahman tazi réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/mohamed-abderrahman-tazi.jpg">
+            </a>
+            <a style="left: 1320px" class="hint-popular-product" href="http://www.critique.ma/director/mohamed-abderrahman-tazi/">
+                <img width="120" height="162" title="Les films Nour-Eddine Lakhmari réalisateur" alt="Les films Nour-Eddine Lakhmari réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/Nour-Eddine_Lakhmari.jpg">
+            </a>
+            <a style="left: 1440px" class="hint-popular-product" href="http://www.critique.ma/director/narjiss-nejjar/">
+                <img width="120" height="158" title="Les films Narjiss Nejjar réalisateur" alt="Les films Narjiss Nejjar réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/Narjiss-Nejjar.jpg">
+            </a>
+            <a style="left: 1560px" class="hint-popular-product" href="http://www.critique.ma/director/ahmed-boulane/">
+                <img width="120" height="160" title="Les films Ahmed boulane réalisateur" alt="Les films Ahmed boulane réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/Ahmed-boulane.jpg">
+            </a>
+            <a style="left: 1680px" class="hint-popular-product" href="http://www.critique.ma/director/abdelillah-zirat/">
+                <img width="120" height="163" title="Les films Abdelillah zirat réalisateur" alt="Les films Abdelillah zirat réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/Zirat_Abdelillah5.jpg">
+            </a>
+            <a style="left: 1800px" class="hint-popular-product" href="www.critique.ma/director/rachid-ferchiou/">
+                <img width="120" height="163" title="Les films Rachid Ferchiou réalisateur" alt="Les films Rachid Ferchiou réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/ferchiou.jpg">
+            </a>
+            <a style="left: 1920px" class="hint-popular-product" href="www.critique.ma/director/anouar-moatassim/">
+                <img width="120" height="160" title="Les films Anouar Moatassim réalisateur" alt="Les films Anouar Moatassim réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/MOATASSIM_Anouar_2012.jpg">
+            </a>
+            <a style="left: 2040px" class="hint-popular-product" href="www.critique.ma/director/hakim-noury/">
+                <img width="120" height="163" title="Les films Hakim noury réalisateur" alt="Les films Hakim noury réalisateur" src="http://www.critique.ma/wp-content/uploads/2016/01/Hakim-Noury.jpg">
+            </a>
+            <a style="left: 2160px" class="hint-popular-product" href="http://www.critique.ma/wp-content/uploads/2016/01/hicham-lasri1.jpg">
+                <img width="120" height="163" title="Les films Hicham Lasri réalisateur" alt="Les films Hicham Lasri réalisateur" src="http://media.senscritique.com/media/000012222742/120/Retour_vers_le_futur.jpg">
+            </a>
+        </div>
+    </div>
     <div id="directorio">
-<?php include_once 'includes/aviso.php'; ?>
+        <?php include_once 'includes/aviso.php'; ?>
         <div class="it_header">
             <h1><?php
                 if ($tex = get_option('text-9')) {
@@ -193,35 +246,10 @@ get_header();
                 }
                 ?></h1>
             <div class="buscador">
-<?php echo buscador_form(); ?>
+                <?php echo buscador_form(); ?>
             </div>
         </div>
 
-        <div class="bloc_homepage">
-
-            <ul class="d-grid">
-
-                <span class="title-bloc-homepage">    Nous croyons à la puissance de la communaité.  Donnez votre avis, faites entendre votre voix! .  </span>
-
-                <li class="first-action hint-action" style="">
-                    <span class="icon-bookmark"></span>
-                    <span class="hint-action-title">Découvrez</span>
-                    <p class="hint-action-description">Découvrez des films qui correspondent à vos goûts, et dévouvrez la cinéma marocaine plus que jamais</p>
-                </li>
-                <li class="second-action hint-action">
-                    <span class="icon-star2"></span>
-                    <span class="hint-action-title">Notez</span>
-                    <p class="hint-action-description">Evaluez les films que vous avez vus. Classez-les selon vos critères et donnez votre avis détaillé dans une critique. 				</p>
-                </li>
-                <li class="third-action hint-action">
-                    <span class="icon-plus-circle"></span>
-                    <span class="hint-action-title">Partagez</span>
-                    <p class="hint-action-description">Faites découvrir vos critiques et vos notes avec vos amis, conseillez leur ce qu'ils pourront aimer. 				</p>
-                </li>
-            </ul>
-
-
-        </div>
 
         <?php
         // function_exists('wp_nav_menu') && has_nav_menu('menu1');
@@ -248,7 +276,7 @@ get_header();
                         _e('Recommended movies', 'mundothemes');
                     }
                     ?> 
-<?php } ?>
+                <?php } ?>
             </span>
             <div class="customNavigation">
                 <a class="btn prev"><b class="icon-chevron-left2"></b></a>
