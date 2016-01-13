@@ -157,3 +157,46 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 .user-info-message img {
     display: block;
 }
+
+.hint-hero {
+    height: 259px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.hint-hero > .d-grid {
+    background-color: #343c48;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 150px;
+    width: auto;
+}
+.d-grid, .d-grid-300 {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.hint-popular-products {
+    bottom: 0;
+    height: 195px;
+    left: 50%;
+    margin-left: -1440px;
+    position: absolute;
+    width: 2880px;
+}
+.hint-popular-products img {
+    border: 2px solid #000;
+}
+.hint-popular-product:nth-child(2n+1) {
+    bottom: 10px;
+}
+.hint-popular-product {
+    position: absolute;
+}
+.hint-hero {
+    text-align: center;
+}
+.hint-hero-subtitle,.hint-hero-title {
+    font-family: Quicksand;
+}
