@@ -200,3 +200,6 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 .hint-hero-subtitle,.hint-hero-title {
     font-family: Quicksand;
 }
+#contenedor .items .it_header span.desc {
+    font-family: "Quicksand";
+}
