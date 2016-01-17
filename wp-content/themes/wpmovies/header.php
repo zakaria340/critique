@@ -19,7 +19,6 @@
 <link href='https://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css"/>
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/icons.css"/>
-  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/qtip2/2.2.1/basic/jquery.qtip.min.css"/>
    
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -27,8 +26,6 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/paginador.js" type="text/javascript"></script>
   <?php } ?>
   <script src="<?php echo get_template_directory_uri(); ?>/js/js.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/semantic/index.js"></script>
-  <script src="http://cdn.jsdelivr.net/qtip2/2.2.1/basic/jquery.qtip.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <?php wp_head(); ?>
   <?php $gwebmasters = get_option('analitica'); if (!empty($gwebmasters)) echo stripslashes(get_option('analitica')); ?>
@@ -36,16 +33,7 @@
 <script>
 $(function()
 {
-    $('.movie').each(function() {
-              var tipContent = $(this).find('.boxinfo').html();
-              $(this).qtip({
-                  content: tipContent,
-                  show: 'mouseover',
-                  hide: 'mouseout'
-              })
-          });
-
-$('.scrolling').jScrollPane({
+    $('.scrolling').jScrollPane({
     height: 400
 });
 });
