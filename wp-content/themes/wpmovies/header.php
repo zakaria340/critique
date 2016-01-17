@@ -19,7 +19,6 @@
 <link href='https://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css"/>
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/icons.css"/>
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <?php $activar = get_option('activar-is'); if ($activar== "true") { ?>
   <script src="<?php echo get_template_directory_uri(); ?>/js/paginador.js" type="text/javascript"></script>
@@ -34,6 +33,14 @@
 <script>
 $(function()
 {
+    $('.movie').qtip({
+   content: {
+        element:  $(this).html()
+    },
+    show: {
+        target: $('.boxinfo')
+    }
+});
 
 $('.scrolling').jScrollPane({
     height: 400
