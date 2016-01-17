@@ -34,9 +34,12 @@
 <script>
 $(function()
 {
-    $('img[alt]').qtip({
-    content: {
-        attr: 'alt'
+    $('.movie').qtip({
+   content: {
+        text: 'You moused over the first H1 element on the document.'
+    },
+    show: {
+        target: $('.boxinfo')
     }
 });
 $('.scrolling').jScrollPane({
