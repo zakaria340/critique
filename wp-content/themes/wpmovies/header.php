@@ -34,10 +34,6 @@
 <script>
 $(function()
 {
-   $('.movie').qtip({
-      content: $(this).find('.boxinfo').first(),
-      show: { ready: true }
-   });
 
 $('.scrolling').jScrollPane({
     height: 400
