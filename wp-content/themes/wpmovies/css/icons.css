@@ -278,6 +278,7 @@ url('fonts/icomoon.svg?e22tl1#icomoon') format('svg');font-weight:normal;font-st
 .stars > p {
     color: white !important;
     font-family: Quicksand;   
+    font-size: 9px !important;
 }
 .score .wp-social-login-connect-with {
     display: none;
