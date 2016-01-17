@@ -34,14 +34,11 @@
 <script>
 $(function()
 {
-    $('.movie').qtip({
-   content: {
-        text: 'You moused over the first H1 element on the document.'
-    },
-    show: {
-        target: $('.boxinfo')
-    }
-});
+   $('.movie').qtip({
+      content: 'boxinfo',
+      show: { ready: true }
+   });
+
 $('.scrolling').jScrollPane({
     height: 400
 });
