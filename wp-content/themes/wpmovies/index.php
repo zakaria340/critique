@@ -362,26 +362,25 @@ get_header();
                             <h2><?php the_title(); ?></h2>
                             <?php if ($mostrar = $terms = strip_tags($terms = get_the_term_list($post->ID, '' . $year_estreno . ''))) { ?><span class="year"><?php echo $mostrar; ?></span><?php } ?>
                         </div>
-            <div class="boxinfo left" style="display:none">
+            <div class="boxinfo" style="display:none">
 <a href="http://dbmovies.org/the-volcano/">
-<span class="tt">The Volcano</span>
-<span class="ttx">
-María, a 17-year-old Kaqchikel Maya, lives with her parents on a coffee plantation at the foot of an active volcano. She is set to be married to the farm's foreman. But María longs to discover the world on the other side of the mountain, a place she cannot even imagine. And so she seduces a coffee-harvester who wants to escape ...<div class="degradado"></div>
-</span>
+<span class="tt"><?php the_title(); ?> <?php echo $mostrar; ?></span>
 </a>
 <div class="cocs imdb_r">
- 
-<div class="a">
-<span class="imdbs">7.4</span>
-</div>
-<div class="b">
-<div class="bar"><span style="width: 74%"></span></div>
-<span class="dato">IMDB: <b>7.4/10</b> <b>490 votes</b></span>
-</div>
+<div class="score">
 
+<div class="post-ratings" id="post-ratings-3949"><div itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating">
+<div class="rank">6.00</div>
+<div class="stars"><span style="width:174px;" class=""><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 1, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.png" id="rating_3949_1"><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 2, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.png" id="rating_3949_2"><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 3, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.png" id="rating_3949_3"><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 4, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.png" id="rating_3949_4"><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 5, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.png" id="rating_3949_5"><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 6, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_on.png" id="rating_3949_6"><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 7, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_off.png" id="rating_3949_7"><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 8, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_off.png" id="rating_3949_8"><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 9, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_off.png" id="rating_3949_9"><img style="cursor: pointer; border: 0px;" onkeypress="rate_post();" onclick="rate_post();" onmouseout="ratings_off(6, 0, 0);" onmouseover="current_rating(3949, 10, '');" title="" alt="" src="http://www.critique.ma/wp-content/plugins/wp-postratings/images/stars_crystal/rating_off.png" id="rating_3949_10"></span>
+<div class="imdbdatos">
+<i><a href="#">Critique</a> <span class="icon-chevron-right2"></span></i>
+<i><span itemprop="ratingValue">
+6.00</span>/<span itemprop="bestRating">10</span>
+<i> <span itemprop="ratingCount">(1 votes)</span></i></i></div></div><i><i>
+</i></i></div></div><i> 
 
+</i></div>
 </div>
-<div class="typepost">movie</div>
 </div>
                     <?php endif; ?>
                     <?php
