@@ -72,7 +72,7 @@ p{}#contenedor .items .it_header
 -3.5% 0 0;overflow:hidden;position:relative;float:left;width:103.5%}.items
 .movie{float:left;width:13%;margin-right:1.1%;margin-bottom:2%}.items .movie
 .imagen{width:100%;position:relative;overflow:hidden;margin:0;padding-top:140%;margin-bottom:5px}.items .movie .imagen
-span.player{width:100%;height:100%;position:absolute;top:0;right:0;transition:none}.items .movie .imagen span.player:hover{background:url(images/play_hover.png) no-repeat 50% 50%}.items .movie .imagen
+span.player{width:100%;height:100%;position:absolute;top:0;right:0;transition:none}.items .movie .imagen span.player:hover{}.items .movie .imagen
 .imdb{position:absolute;bottom:2%;right:2%;font-size:12px;background:rgba(0, 0, 0, 0.9);padding:2px
 5px;color:rgba(255, 255, 255, 0.9);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.items .movie .imagen .imdb
 span{font-size:12px;color:#FFCB00}.items .movie .imagen
