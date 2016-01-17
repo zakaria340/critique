@@ -362,6 +362,27 @@ get_header();
                             <h2><?php the_title(); ?></h2>
                             <?php if ($mostrar = $terms = strip_tags($terms = get_the_term_list($post->ID, '' . $year_estreno . ''))) { ?><span class="year"><?php echo $mostrar; ?></span><?php } ?>
                         </div>
+            <div class="boxinfo left" style="display:none">
+<a href="http://dbmovies.org/the-volcano/">
+<span class="tt">The Volcano</span>
+<span class="ttx">
+María, a 17-year-old Kaqchikel Maya, lives with her parents on a coffee plantation at the foot of an active volcano. She is set to be married to the farm's foreman. But María longs to discover the world on the other side of the mountain, a place she cannot even imagine. And so she seduces a coffee-harvester who wants to escape ...<div class="degradado"></div>
+</span>
+</a>
+<div class="cocs imdb_r">
+ 
+<div class="a">
+<span class="imdbs">7.4</span>
+</div>
+<div class="b">
+<div class="bar"><span style="width: 74%"></span></div>
+<span class="dato">IMDB: <b>7.4/10</b> <b>490 votes</b></span>
+</div>
+
+
+</div>
+<div class="typepost">movie</div>
+</div>
                     <?php endif; ?>
                     <?php
                 endwhile;
