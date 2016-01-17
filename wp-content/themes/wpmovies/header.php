@@ -34,6 +34,11 @@
 <script>
 $(function()
 {
+    $('img[alt]').qtip({
+    content: {
+        attr: 'alt'
+    }
+});
 $('.scrolling').jScrollPane({
     height: 400
 });
