@@ -361,8 +361,7 @@ get_header();
                             </div>
                             <h2><?php the_title(); ?></h2>
                             <?php if ($mostrar = $terms = strip_tags($terms = get_the_term_list($post->ID, '' . $year_estreno . ''))) { ?><span class="year"><?php echo $mostrar; ?></span><?php } ?>
-                        </div>
-            <div class="boxinfo" style="display:none">
+                         <div class="boxinfo" style="display:none">
 <a href="http://dbmovies.org/the-volcano/">
 <span class="tt"><?php the_title(); ?> <?php echo $mostrar; ?></span>
 </a>
@@ -382,6 +381,8 @@ get_header();
 </i></div>
 </div>
 </div>
+                        </div>
+          
                     <?php endif; ?>
                     <?php
                 endwhile;
