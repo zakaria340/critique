@@ -76,6 +76,7 @@ if($mostrar = $terms = strip_tags( $terms = get_the_term_list( $post->ID, ''.$ye
 <div class="score">
 
 <?php  if(function_exists('the_ratings')) { the_ratings(); } ?> 
+ <?php do_action( 'wordpress_social_login' ); ?> 
 
 </div>
 <div class="xmll"><p itemprop="director" itemscope itemtype="http://schema.org/Person" class="xcsd"><span itemprop="name"><?php echo get_the_term_list($post->ID, ''.$director.'', '<b class="icon-bullhorn"></b> &nbsp;', ', ', ''); ?></span></p></div>
