@@ -35,7 +35,7 @@
 $(function()
 {
    $('.movie').qtip({
-      content: 'boxinfo',
+      content: '.boxinfo',
       show: { ready: true }
    });
 
